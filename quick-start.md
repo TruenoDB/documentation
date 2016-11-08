@@ -2,17 +2,14 @@ Some documentation
 
 This is a code block with tabs for each languages: 
 
-{% codetabs name="Python", type="py" -%} 
+{% codetabs name="Javascript", type="js" -%} 
 
-msg = "Hello World" print msg 
+console.log(msg);
 
-{%- language name="JavaScript", type="js" -%} 
 
-var msg = "Hello World"; console.log(msg); 
+{%- language name="Java", type="java" -%} 
 
-{%- language name="HTML", type="html" -%} 
-
-<b>Hello World</b> 
+System.out.println(msg);
 
 {%- endcodetabs %}
 
