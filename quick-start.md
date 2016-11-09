@@ -12,7 +12,11 @@ You can get started with Trueno pretty easy and fast. You just need a few depede
 
 ## Installing Trueno
 
-1. First, install trueno globally from npm
+1. First, install trueno globally from npm:
 
-1. 
+  ```bash
+  > npm install -g trueno
+  ```
+
+2. 
 
