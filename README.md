@@ -1,2 +1,2 @@
-![](/assets/logo_medium.png =75x75)
+![](/assets/logo_medium.png=75x75)
 
