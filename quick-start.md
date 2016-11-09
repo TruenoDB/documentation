@@ -2,7 +2,7 @@
 
 ---
 
-You can get started with Trueno pretty easy and fast. You just need a few depedencies:
+You can get started with Trueno pretty easy and fast. You just need a few dependencies:
 
 ## Dependencies
 
