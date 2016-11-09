@@ -7,8 +7,7 @@
         "github",
         "anchorjs",
         "codetabs",
-        "asciinema",
-        "tabs"
+        "asciinema"
     ],
     "pluginsConfig": {
         "edit-link": {
