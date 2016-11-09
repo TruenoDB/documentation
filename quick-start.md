@@ -7,13 +7,14 @@
 
 This is a code block with tabs for each languages: 
 
-{% codetabs name="Javascript", type="js" -%} 
+{% codetabs name="Commands", -%} 
 
-console.log(msg);
+<script type="text/javascript" src="https://asciinema.org/a/3wkksthmquso83awaeucg4v1b.js" id="asciicast-3wkksthmquso83awaeucg4v1b" async></script>
 
-{%- language name="Java", type="java" -%} 
 
-System.out.println(msg);
+{%- language name="Visual", -%} 
+
+
 
 {%- endcodetabs %}
 
