@@ -1,1 +1,28 @@
-{ "gitbook": ">=3.2.1", "title": "Trueno", "plugins": ["edit-link", "prism", "-highlight", "github", "anchorjs", "codetabs", "asciinema"], "pluginsConfig": { "edit-link": { "base": "https://github.com/TruenoDB/documentation/tree/master", "label": "Edit This Page" }, "github": { "url": "https://github.com/TruenoDB/documentation/" }, "theme-default": { "styles": { "website": "build/gitbook.css" } } }}
+{
+    "gitbook": ">=3.2.1",
+    "plugins": [
+        "edit-link",
+        "prism",
+        "-highlight",
+        "github",
+        "anchorjs",
+        "codetabs",
+        "asciinema",
+        "tabs"
+    ],
+    "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/TruenoDB/documentation/tree/master",
+            "label": "Edit This Page"
+        },
+        "github": {
+            "url": "https://github.com/TruenoDB/documentation/"
+        },
+        "theme-default": {
+            "styles": {
+                "website": "build/gitbook.css"
+            }
+        }
+    },
+    "title": "Trueno"
+}
