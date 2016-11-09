@@ -1,5 +1,5 @@
 # Summary
 
-* [Trueno](README.md)
+* [Introduction](README.md)
 * [Quick Start](quick-start.md)
 
