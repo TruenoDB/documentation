@@ -24,5 +24,15 @@ You can get started with Trueno pretty easy and fast. You just need a few depede
   > trueno setup
   ```
 
-3. 
+3. Run trueno single instance:
+4. ```bash
+  > trueno start
+  ```
+
+
+Thats it! you should have Trueno up and running by now. Go to your **browser** to visit the web console at:
+
+```
+http://localhost:8000
+```
 
