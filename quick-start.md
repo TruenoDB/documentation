@@ -14,10 +14,11 @@ You can get started with Trueno pretty easy and fast. You just need a few depede
 ## Installing Trueno
 
 1. First, install trueno globally from npm:
+`> npm install -g trueno`
 
 2. 
 
-`> npm install -g trueno`
+
 
 
 <script type="text/javascript" src="https://asciinema.org/a/3wkksthmquso83awaeucg4v1b.js" id="asciicast-3wkksthmquso83awaeucg4v1b" async></script>
