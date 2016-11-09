@@ -1,4 +1,4 @@
-# Quick Start \(Classic\)
+# Quick Start
 
 ---
 
