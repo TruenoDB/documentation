@@ -1,5 +1,8 @@
 # Summary
 
+###Version 1.0.0###
+---
+
 * [Trueno](README.md)
 * [Motivation]()
 * [Quick Start](pages/quick-start/quick-start-commands.md)
