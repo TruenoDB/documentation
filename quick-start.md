@@ -6,8 +6,7 @@ You can get started with Trueno pretty easy and fast. You just need a few depede
 
 ## Dependencies
 
-
-
+- Java 8
 
 
 
