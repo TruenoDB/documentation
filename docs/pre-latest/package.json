@@ -4,8 +4,7 @@
   "description": "Documentation for the Trueno graph store.",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf docs/pre-latest && mkdir docs/pre-latest && cp -r _book/* docs/pre-latest/",
-    "deploy": "echo aloja && echo "
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
