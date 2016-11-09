@@ -1,14 +1,6 @@
 {
     "gitbook": ">=3.2.1",
-    "plugins": [
-        "edit-link",
-        "prism",
-        "-highlight",
-        "github",
-        "anchorjs",
-        "codetabs",
-        "asciinema"
-    ],
+    "plugins": ["edit-link", "prism", "-highlight", "github", "anchorjs", "codetabs"],
     "pluginsConfig": {
         "edit-link": {
             "base": "https://github.com/TruenoDB/documentation/tree/master",
