@@ -19,7 +19,8 @@ You can get started with Trueno pretty easy and fast. You just need a few depede
   ```
 
 2. Download and install internal components:
-  ```
+
+  ```bash
   > trueno setup
   ```
 
