@@ -1,6 +1,6 @@
 
-<img height="75" src="assets/trueno.png" align="middle">
-<img height="300" src="assets/logo_medium.png" align="middle">
+<img height="75" src="../../assets/images/trueno.png" align="middle">
+<img height="300" src="../../assets/images/logo_medium.png" align="middle">
 
 ### The Hybrid Graph Datastore/Computational Engine ###
 

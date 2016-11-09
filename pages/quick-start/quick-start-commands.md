@@ -10,7 +10,7 @@ You can get started with Trueno pretty easy and fast. You just need a few depend
 * **Node.js 6** with **npm** or later
 * **tar** and **unzip**
 
-## Installing and runing Trueno
+## Installing and running Trueno
 
 1. First, install **Trueno** globally from npm:
 
@@ -39,5 +39,5 @@ http://localhost:8000
 
 You should see the following web page:
 
-![](/assets/webconsole-cluster.png)
+![](/assets/images/webconsole-cluster.png)
 
