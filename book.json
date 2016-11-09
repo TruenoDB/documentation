@@ -11,7 +11,7 @@
         },
         "theme-default": {
             "styles": {
-                "website": "build/gitbook.css"
+                 "website": "styles/website.css"
             }
         }
     },
