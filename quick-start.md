@@ -15,6 +15,7 @@ You can get started with Trueno pretty easy and fast. You just need a few depede
 
 1. First, install trueno globally from npm:
 
+2. 
 
 `> npm install -g trueno`
 
