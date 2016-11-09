@@ -1,3 +1,2 @@
-![](/assets/logo_medium.png)
+![](/assets/logo_medium.png =75x75)
 
-s
