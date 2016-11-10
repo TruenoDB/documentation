@@ -1,0 +1,10 @@
+/* CSS for ebook */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body{
+	font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.gitbook-link {
+    display: none !important;
+}

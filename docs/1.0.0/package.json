@@ -1,0 +1,28 @@
+{
+  "name": "trueno-documentation",
+  "version": "1.0.0",
+  "description": "Documentation for the Trueno graph store.",
+  "main": "index.js",
+  "scripts": {
+    "build": "gitbook build && rm -rf docs/pre-latest && mkdir docs/pre-latest && cp -r _book/* docs/pre-latest/",
+    "deploy": "mkdir docs/latest && mv docs/pre-latest/* docs/latest && rmdir docs/pre-latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TruenoDB/documentation.git"
+  },
+  "keywords": [
+    "trueno",
+    "documentation",
+    "guide"
+  ],
+  "author": "Victor O. Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TruenoDB/documentation/issues"
+  },
+  "homepage": "https://github.com/TruenoDB/documentation#readme",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.0"
+  }
+}
