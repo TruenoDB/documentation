@@ -1,7 +1,10 @@
 {
     "gitbook": ">=3.2.1",
-    "plugins": ["edit-link", "prism", "-highlight", "github", "anchorjs", "codetabs"],
+    "plugins": ["edit-link", "prism", "-highlight", "github", "anchorjs", "codetabs","expandable-chapters", "include-codeblock"],
     "pluginsConfig": {
+        "include-codeblock": {
+           "template": "{{{content}}}"
+        },
         "edit-link": {
             "base": "https://github.com/TruenoDB/documentation/tree/master",
             "label": "Edit This Page"
