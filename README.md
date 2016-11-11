@@ -8,7 +8,6 @@
 
 ## Features
 
-- Awesome
 - Distributed, resilient, and fast static graph database.
 - Support distributed computation.
 - Online queries and traversal.
