@@ -4,18 +4,17 @@
 ---
 
 * [Trueno](README.md)
-* [Motivation]()
-* [Quick Start]()
-    - [Commands](pages/quick-start/quick-start-commands.md)
-    - [Interactive](pages/quick-start/quick-start-interactive.md)
+* [Motivation](pages/motivation/motivation.md)
+* [Quick Start](pages/quick-start/quick-start-commands.md)
+<!--     - [Commands](pages/quick-start/quick-start-commands.md)
+    - [Interactive](pages/quick-start/quick-start-interactive.md) -->
 ---
 * [Deployment/Uninstall]()
-    - [Installation]()
-    - [Configuration]()
-    - [CLI Flags]()
-    - [Centralized Deployment]()
-    - [Distributed Deployment]()
-    - [Uninstall]()
+    - [Install](pages/deployment-install/install.md)
+    - [CLI Flags](pages/deployment-install/cli-flags.md)
+    - [Centralized Deployment](pages/deployment-install/centralized-deployment.md)
+    - [Distributed Deployment](pages/deployment-install/distributed-deployment.md)
+    - [Uninstall](pages/deployment-install/uninstall.md)
 * [API & Drivers]() 
     - [Drivers/Connectors](pages/api-drivers/drivers-connectors/drivers-connectors.md)
     - [Graph]()
@@ -34,8 +33,7 @@
 ---
 * [FAQ]() 
 * [Developer Guide]() 
-    - [Design]()
-    - [Components]()
+    - [Under the hood]()
     - [Codebase]()
     - [Execution Flow]()
     - [Contribution Guide]()

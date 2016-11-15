@@ -1,9 +1,10 @@
 {
     "gitbook": ">=3.2.1",
-    "plugins": ["edit-link", "prism", "-highlight", "github", "anchorjs", "codetabs","expandable-chapters", "include-codeblock"],
+    "plugins": ["edit-link", "prism", "-highlight", "github", "anchorjs", "codetabs", "expandable-chapters", "include-codeblock", "custom-favicon"],
     "pluginsConfig": {
+        "favicon": "assets/images/favicon.ico",
         "include-codeblock": {
-           "template": "{{{content}}}"
+            "template": "{{{content}}}"
         },
         "edit-link": {
             "base": "https://github.com/TruenoDB/documentation/tree/master",
@@ -14,7 +15,7 @@
         },
         "theme-default": {
             "styles": {
-                 "website": "styles/website.css"
+                "website": "styles/website.css"
             }
         }
     },
