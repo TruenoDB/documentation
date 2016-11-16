@@ -27,6 +27,9 @@
 * [Compute]()
     - [Trueno's Compute Server](pages/compute/compute-server/trueno-compute-server.md)
     - [Algorithms](pages/compute/algorithms/algorithms.md)
+      - [PageRank](pages/compute/algorithms/pagerank.md)
+      - [Connected Components](pages/compute/algorithms/connected-components.md)
+      - [Triangle Counting](pages/compute/algorithms/triangle-counting.md)
 * [Recipes]() 
 * [Web Console]()
 
