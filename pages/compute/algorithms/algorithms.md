@@ -1,7 +1,3 @@
-# Trueno's Compute Server
-The TruenoDB distributed computation server.
-
-> **Trueno Compute Server** relies on Spark Job Server, and GraphX.
 
 ## Compute via Web Console
 ###Compute Menu
