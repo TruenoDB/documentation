@@ -23,7 +23,7 @@ Trueno came to fruition because of the following arguments and needs:
 
 ## What Trueno aims for?
 
-This project was build by a group of Doctoral and Master Students at [**Purdue CS**](https://www.cs.purdue.edu/) with the only goal of accelerate graph based applications, analysis, and scientific applications. Furthermore, we decide that Trueno MUST meet the following charasteristics to address the previous needs and arguments:
+This project was build by a group of Doctoral and Master Students at ![](/assets/icons/school.png)[**Purdue CS**](https://www.cs.purdue.edu/) with the only goal of accelerate graph based applications, analysis, and scientific applications. Furthermore, we decide that Trueno MUST meet the following charasteristics to address the previous needs and arguments:
 
 - Must be **easy** to deploy and getting started. As less configuration as possible.
 - Must be able to handle small and large graph data.

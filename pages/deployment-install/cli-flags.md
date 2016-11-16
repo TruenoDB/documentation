@@ -36,7 +36,7 @@ Stop trueno(if running in daemon mode, otherwise Ctrl+C will stop the foreground
 ```bash
 > trueno stop [options]
 ```
-
+ 
   Options:
 
     -h, --help     output usage information
@@ -58,3 +58,37 @@ Install [internal components](install.html#internal-components).
     -p, --post     Run post setup.
     --debug        Show debug messages in the console
 
+
+### ![](/assets/icons/flag.png) balancer
+
+Run trueno load balancer. This will be used when running in [cluster mode](distributed-deployment.md) with multiple machines.
+
+```bash
+> trueno balancer [options]
+```
+
+  Options:
+
+    -h, --help         output usage information
+    -V, --version      output the version number
+    --start <config>   Start the balancer with he JSON file containing the balancer configuration
+    --stop             Stop running load balancers
+    --list             List running load balancers
+    --generate <path>  Generate configuration template file to the desired path
+
+### ![](/assets/icons/flag.png) tools
+
+Execute trueno's utility tools.
+
+```bash
+> trueno tools [options]
+```
+
+  Options:
+
+    -h, --help          output usage information
+    -V, --version       output the version number
+    --flush             Flush PM2 logs
+    --clear             Clear this Trueno instance data
+    --status            Show the database processes status
+    --monitor <option>  Monitor the database processes, options: s(simple) or a(advanced)
