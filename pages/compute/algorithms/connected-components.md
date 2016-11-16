@@ -3,7 +3,7 @@ The connected components of an undirected graph are the equivalence classes of v
 
 ![](/assets/images/compute/ConnectedComponents-example.png)
 
-The graph has three components [3]. Connected Components are identified by the lowest vertex ID in the component.
+The graph has three components [1]. Connected Components are identified by the lowest vertex ID in the component.
 
 | Component ID   | Components Members |
 | -------------- | ------------------ |
