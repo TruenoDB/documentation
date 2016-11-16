@@ -25,7 +25,7 @@
     - [SQL Queries]()
     - [Compute API]()
 * [Compute]()
-    - [Trueno's Compute Server]()
+    - [Trueno's Compute Server](pages/compute/compute-server/trueno-compute-server.md)
     - [Algorithms](pages/compute/algorithms/algorithms.md)
 * [Recipes]() 
 * [Web Console]()
