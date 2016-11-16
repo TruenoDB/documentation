@@ -27,5 +27,5 @@ The following section expose the **PROS** and **CONS** of Trueno. This may chang
 
 ### ![](/assets/icons/thumb-down.png) What is Trueno NOT good for?
 
-- Transactional applications: Trueno does **not** support [transactions](https://en.wikipedia.org/wiki/Database_transaction).
+- Transactional applications: Trueno does **not** support [ACID](https://en.wikipedia.org/wiki/ACID) [transactions](https://en.wikipedia.org/wiki/Database_transaction).
 - Strict consistency requirement: Trueno is [eventual consistent](https://en.wikipedia.org/wiki/Eventual_consistency).
