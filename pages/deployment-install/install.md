@@ -28,7 +28,10 @@ This will intall trueno globally in your system. Verify by executing the help co
   ```bash
   > trueno setup
   ```
-  This command will take a while to complete depending on your internet connection speed and procesing power. The following components will be installed:
+
+  This command will take a while to complete depending on your internet connection speed and procesing power. The following components will be installed.
+
+### Internal Components
 
   - [Gremlin Server](https://tinkerpop.apache.org/): For the Gremlin Graph Traversal languaje.
   - [Elastic Search](https://www.elastic.co/): For indexing the graph data.

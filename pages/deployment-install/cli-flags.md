@@ -2,6 +2,59 @@
 
 ---
 
-You can get started with Trueno pretty easy and fast. You just need a few dependencies:
+Trueno has **5** main flags with subflags. The following is the description of each command:
 
+Usage:
+
+```bash
+> trueno <cmd>
+```
+
+### ![](/assets/icons/flag.png) start
+
+Launch trueno.
+
+```bash
+> trueno start [options]
+```
+
+  Options:
+
+    -h, --help                 output usage information
+    -V, --version              output the version number
+    -h, --host <string>        The host or IP address to be exposed, default: localhost
+    -p, --port <number>        The local port to be exposed, default: 8000
+    --dir <dataDirectoryPath>  The data directory for the storage engines
+    --forever                  Run trueno as a daemon in the background
+    --cluster <hostsJSON>      Start the database in cluster mode with the provided hosts JSON
+    --debug                    Show debug messages in the console
+
+### ![](/assets/icons/flag.png) stop
+
+Stop trueno(if running in daemon mode, otherwise Ctrl+C will stop the foreground process).
+
+```bash
+> trueno stop [options]
+```
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+
+
+### ![](/assets/icons/flag.png) setup
+
+Install [internal components](install.html#internal-components).
+
+```bash
+> trueno setup [options]
+```
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+    -p, --post     Run post setup.
+    --debug        Show debug messages in the console
 
