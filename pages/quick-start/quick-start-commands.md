@@ -1,4 +1,4 @@
-# Quick Start
+#![](/assets/icons/clock-fast.png)Quick Start
 
 ---
 
@@ -26,7 +26,7 @@ You can get started with Trueno pretty easy and fast. You just need a few depend
 
 3. Run trueno single instance:
 
-4. ```bash
+  ```bash
   > trueno start
   ```
 

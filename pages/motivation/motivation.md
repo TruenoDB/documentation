@@ -1,4 +1,4 @@
-# Motivation
+# ![](/assets/icons/lightbulb.png)Motivation
 
 ---
 

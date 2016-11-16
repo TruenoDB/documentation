@@ -11,9 +11,10 @@
 ---
 * [Deployment/Uninstall]()
     - [Install](pages/deployment-install/install.md)
-    - [CLI Flags](pages/deployment-install/cli-flags.md)
-    - [Centralized Deployment](pages/deployment-install/centralized-deployment.md)
-    - [Distributed Deployment](pages/deployment-install/distributed-deployment.md)
+    - [Ports & Flags](pages/deployment-install/cli-flags-ports.md)
+    - [Single Machine Deployment](pages/deployment-install/centralized-deployment.md)
+    - [Cluster Deployment](pages/deployment-install/distributed-deployment.md)
+    - [Tools](pages/deployment-install/tools.md)
     - [Uninstall](pages/deployment-install/uninstall.md)
 * [API & Drivers]() 
     - [Drivers/Connectors](pages/api-drivers/drivers-connectors/drivers-connectors.md)
