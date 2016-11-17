@@ -1,4 +1,4 @@
-# Install
+# ![](/assets/icons/download.png)Install
 
 ---
 
@@ -17,7 +17,7 @@ After all dependencies are installed, you can get Trueno from [**NPM**](https://
   ```bash
   > npm install -g trueno
   ```
-This will intall trueno globally in your system. Verify by executing the help command:
+This will intall Trueno globally in your system. Verify by executing the help command:
 
   ```bash
   > trueno --hep

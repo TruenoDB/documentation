@@ -1,6 +1,22 @@
-# CLI Flags
+# Ports & Flags
 
 ---
+
+## ![](/assets/icons/serial-port.png)Ports
+
+- ![](/assets/icons/serial-port.png) **8000**: Trueno default external port. This port will be exposed to external drivers.
+- ![](/assets/icons/serial-port.png) **8001**: Trueno internal port. This port is only used for internal system communication.
+- ![](/assets/icons/serial-port.png) **8002**: The Gremlin Server port.
+- ![](/assets/icons/serial-port.png) **8003**: Cassandra external port.
+- ![](/assets/icons/serial-port.png) **8004**: ElasticSearch external port.
+- ![](/assets/icons/serial-port.png) **8005**: Spark Master external port.
+- ![](/assets/icons/serial-port.png) **8006**: Spark Web UI port.
+
+**NOTE**: At the moment, the only configurable port is the Trueno default port(8000). If you need to change a certain port, edit directly the configuration file at:
+
+> path/to/global/node_modules/trueno/conf/trueno-config.yaml
+
+## ![](/assets/icons/flag.png)Flags
 
 Trueno has **5** main flags with subflags. The following is the description of each command:
 
@@ -12,7 +28,7 @@ Usage:
 
 ### ![](/assets/icons/flag.png) start
 
-Launch trueno.
+Launch Trueno.
 
 ```bash
 > trueno start [options]
@@ -31,7 +47,7 @@ Launch trueno.
 
 ### ![](/assets/icons/flag.png) stop
 
-Stop trueno(if running in daemon mode, otherwise Ctrl+C will stop the foreground process).
+Stop Trueno(if running in daemon mode, otherwise Ctrl+C will stop the foreground process).
 
 ```bash
 > trueno stop [options]
@@ -61,7 +77,7 @@ Install [internal components](install.html#internal-components).
 
 ### ![](/assets/icons/flag.png) balancer
 
-Run trueno load balancer. This will be used when running in [cluster mode](distributed-deployment.md) with multiple machines.
+Run Trueno load balancer. This will be used when running in [cluster mode](distributed-deployment.md) with multiple machines.
 
 ```bash
 > trueno balancer [options]
@@ -78,7 +94,7 @@ Run trueno load balancer. This will be used when running in [cluster mode](distr
 
 ### ![](/assets/icons/flag.png) tools
 
-Execute trueno's utility tools.
+Execute Trueno's utility tools.
 
 ```bash
 > trueno tools [options]
