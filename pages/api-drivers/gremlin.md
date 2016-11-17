@@ -70,10 +70,11 @@ The default traversal language for Trueno Web Console is gremlin. Trueno relies 
 ```
 
 * Look up for the neighbors of a vertex.
+
 ```java
     g.V(bob).outV().valueMap().forEachRemaining(value -> {
         ...
         });
 ```
 
-More examples can be found in the [github repository](https://github.com/TruenoDB/trueno-gremlin/tree/dev/src/main/java/org/trueno/gremlin/examples). A complete reference of the traversal language can be found in [Apache TinkerPop Documentation](http://tinkerpop.apache.org/docs/current/reference/#traversal).
+More examples can be found in the [github repository](https://github.com/TruenoDB/trueno-gremlin/tree/dev/src/main/java/org/trueno/gremlin/examples). A complete reference of the gremlin traversal language can be found in the [Apache TinkerPop Documentation](http://tinkerpop.apache.org/docs/current/reference/#traversal).
