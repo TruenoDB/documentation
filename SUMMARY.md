@@ -22,7 +22,7 @@
     - [Vertex]()
     - [Edge]()
     - [Batch Operations]()
-    - [Gremlin Queries]()
+    - [Gremlin Queries](pages/api-drivers/gremlin.md)
     - [SQL Queries]()
     - [Compute API]()
 * [Compute]()
