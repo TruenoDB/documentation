@@ -1,4 +1,5 @@
-###Triangle Counting
+# Triangle Counting
+---
 Counting triangles can measure the connectedness of a graph or subgraph. Graphs are treated as undirected in **GraphX**. **GraphX** collapse duplicate edges into one [1,2]. The more connected a graph is, the more triangles it has. 
 
 ###References

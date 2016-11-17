@@ -33,6 +33,7 @@
       - [PageRank](pages/compute/algorithms/pagerank.md)
       - [Connected Components](pages/compute/algorithms/connected-components.md)
       - [Triangle Counting](pages/compute/algorithms/triangle-counting.md)
+      - [Clustering](pages/compute/algorithms/clustering.md)
 * [Recipes]() 
 * [Web Console]()
 

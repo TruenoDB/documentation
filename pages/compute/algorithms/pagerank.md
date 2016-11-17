@@ -1,5 +1,6 @@
-##PageRank
-PageRank is a way to measure the "authority" of vertices in a graph [1]. A simplistic alternative to PageRank is to measure the in-degrees at each vertex.
+#PageRank
+---
+**PageRank** is a way to measure the **"authority"** of vertices in a graph [1]. A simplistic alternative to PageRank is to measure the in-degrees at each vertex.
 The algorithm is describe as follows:
 1. Initialize the vertices with a starting PageRank of 1/N, where N is the number of vertices in the graph.
 2. Loop:

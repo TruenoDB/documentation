@@ -1,4 +1,5 @@
-##Connected Components
+# Connected Components
+---
 The connected components of an undirected graph are the equivalence classes of vertices under the "is reachable from" relation [1].
 
 ![](/assets/images/compute/ConnectedComponents-example.png)
