@@ -1,11 +1,11 @@
-# Uninstall
+# Update
 
 ---
 
-Uninstalling trueno is very simple. Just remove the global NPM package:
+To update trueno, just execute the following command which will update the global NPM package:
 
   ```bash
-  > npm remove -g trueno
+  > npm update -g trueno
   ```
 
 **NOTE**: If you where using trueno without the **--dir** flag, all the data will be wipped out along with the installation. If you want to keep the date either use the **--dir** flag or go to:
