@@ -22,6 +22,7 @@ The default traversal language for Trueno Web Console is gremlin. Trueno relies 
 
 ###Connecting to the database
 * Create an instance of `TruenoGraph`.
+
 ```java
     Configuration config = new BaseConfiguration();
     config.setProperty(TruenoGraph.CONFIG_SERVER, "http://localhost");
@@ -31,6 +32,7 @@ The default traversal language for Trueno Web Console is gremlin. Trueno relies 
 ```
 
 * Open a Trueno database. If the database does not exists in the backend, it will be created.
+
 ```java
     graph.open()
         // get an instance of the graph database
