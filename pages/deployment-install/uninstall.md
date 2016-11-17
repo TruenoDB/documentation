@@ -1,4 +1,4 @@
-# Uninstall
+# ![](/assets/icons/delete.png)Uninstall
 
 ---
 

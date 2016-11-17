@@ -23,14 +23,14 @@ You will see a console output similar to the following:
     info: Cassandra successfully started!
     info: All components started
     info: Starting database...
-    info: Internal API awaiting for connections at: machine_host_name:8001
-    info: ElasticSeach engine connected at: [{"port":8004,"host":"machine_host_name"}]
-    info: External API awaiting for connections at: machine_host_name:8000
-    info: Cluster status collected.  _id=machine_host_name, arch=64, model=Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz, speed=2700, user=181792530, nice=0, sys=116932760, idle=744926600, irq=0, cores=4, network=null, freemem=147283968, hostname=machine_host_name, platform=Node.js, totalmem=8589934592, uptime=9068212, osversion=15.6.0, version=6.0.0, os=OS X, $ref=$["_instance"]
+    info: Internal API awaiting for connections at: localhost:8001
+    info: ElasticSeach engine connected at: [{"port":8004,"host":"localhost"}]
+    info: External API awaiting for connections at: localhost:8000
+    info: Cluster status collected.  _id=localhost, arch=64, model=Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz, speed=2700, user=181792530, nice=0, sys=116932760, idle=744926600, irq=0, cores=4, network=null, freemem=147283968, hostname=localhost, platform=Node.js, totalmem=8589934592, uptime=9068212, osversion=15.6.0, version=6.0.0, os=OS X, $ref=$["_instance"]
     info: PM2-UI Monitor: [INFO] Starting..
   ```
 
-This will start Trueno as a single instance in the **foreground**. the default port is **8000** and the binded host will be the local network hostname, usually the machine hostname. In the previous example the host is: **machine_host_name**.
+This will start Trueno as a single instance in the **foreground**. the default port is **8000** and the binded host will be localhost which is accesible locally. If Trueno must be accessed from outside your computer, you should use the **-h** flag to bind to a public address, for instance '0.0.0.0'(all interfaces).
 
 Lets say that you want to let Trueno running even when you close the terminal and exit your session. In the following example we do this by adding the **forever** flag.
 
@@ -50,7 +50,7 @@ The following is a complete example of starting Trueno in a single machine with 
 
   ```bash
   > trueno start \
-    -h localhost
+    -h 'my_custom_host'
     -p 9999
     --dir /path/to/my/data/dir
     --debug

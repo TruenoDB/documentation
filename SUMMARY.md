@@ -16,6 +16,7 @@
     - [Ports & Flags](pages/deployment-install/cli-flags-ports.md)
     - [Single Machine Deployment](pages/deployment-install/centralized-deployment.md)
     - [Cluster Deployment](pages/deployment-install/distributed-deployment.md)
+    - [Load Balancing](pages/deployment-install/load-balancing.md)
     - [Tools](pages/deployment-install/tools.md)
 * [API & Drivers]() 
     - [Drivers/Connectors](pages/api-drivers/drivers-connectors/drivers-connectors.md)
