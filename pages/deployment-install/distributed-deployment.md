@@ -15,7 +15,7 @@ Important notes:
 
 In order to deploy Trueno in a distributed way you will need follow these steps:
 
-1. [Install](pages/deployment-install/install.md) Trueno at each machine you want to deploy as part of the cluster.
+1. [Install](install.html) Trueno at each machine you want to deploy as part of the cluster.
 2. Run the cluster setup coordinator, where the Spark Master will run.
 3. Run other Trueno instances at other machines which will connect to the coordinator in order to setup the cluster.
 4. (optional) Run a load balancer to redirect request to all machines in a balanced way.

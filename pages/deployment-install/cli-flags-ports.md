@@ -77,7 +77,7 @@ Install [internal components](install.html#internal-components).
 
 ### ![](/assets/icons/flag.png) balancer
 
-Run Trueno load balancer. This will be used when running in [cluster mode](distributed-deployment.md) with multiple machines.
+Run Trueno load balancer. This will be used when running in [cluster mode](distributed-deployment.html) with multiple machines.
 
 ```bash
 > trueno balancer [options]
