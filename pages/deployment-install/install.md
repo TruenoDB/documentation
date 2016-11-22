@@ -1,4 +1,4 @@
-# ![](/assets/icons/download.png)Install
+# ![](../../assets/icons/download.png)Install
 
 ---
 

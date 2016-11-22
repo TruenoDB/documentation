@@ -1,14 +1,14 @@
-# ![](/assets/icons/delete.png)Uninstall
+# ![](../../assets/icons/delete.png)Uninstall
 
 ---
 
-Uninstalling trueno is very simple. Just remove the global NPM package:
+To uninstall Trueno, remove the global NPM package:
 
   ```bash
   > npm remove -g trueno
   ```
 
-**NOTE**: If you where using trueno without the **--dir** flag, all the data will be wipped out along with the installation. If you want to keep the date either use the **--dir** flag or go to:
+**NOTE**: If you where using trueno without the **--dir** flag, all the data will be wiped along with the installation. If you want to keep the data either use the **--dir** flag or go to:
 
 > path/to/global/node_modules/trueno/lib/core/data
 

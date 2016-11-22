@@ -1,4 +1,3 @@
-
 <img height="75" src="assets/images/trueno.png" align="middle">
 <img height="300" src="assets/images/logo_medium.png" align="middle">
 
@@ -6,7 +5,7 @@
 
 ---
 
-## ![](/assets/icons/auto-fix.png) Features
+## ![](assets/icons/auto-fix.png) Features
 
 - Distributed, resilient, and fast static graph store.
 - Support distributed computation.
@@ -17,7 +16,7 @@
  
 The following section expose the **PROS** and **CONS** of Trueno. This may change in the near future.
 
-### ![](/assets/icons/thumb-up.png) What is Trueno good for?
+### ![](assets/icons/thumb-up.png) What is Trueno good for?
 
  + Graph analytic at small and big scale
  + Small and large graph data persistent storage
@@ -25,7 +24,7 @@ The following section expose the **PROS** and **CONS** of Trueno. This may chang
  + Extendable applications(multiple drivers support)
  + Experiment and design of graph algorithms(via GraphX)
 
-### ![](/assets/icons/thumb-down.png) What is Trueno NOT good for?
+### ![](assets/icons/thumb-down.png) What is Trueno NOT good for?
 
 - Transactional applications: Trueno does **not** support [ACID](https://en.wikipedia.org/wiki/ACID) [transactions](https://en.wikipedia.org/wiki/Database_transaction).
 - Strict consistency requirement: Trueno is [eventual consistent](https://en.wikipedia.org/wiki/Eventual_consistency).

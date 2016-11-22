@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Drivers/Connectors · Trueno</title>
+        <title>Clustering · Trueno</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -68,6 +68,8 @@
 
     
     
+    <link rel="prev" href="triangle-counting.html" />
+    
 
     </head>
     <body>
@@ -93,7 +95,7 @@
 
     
         
-        <li class="header">Version 1.0.0</li>
+        <li class="header">Version 0.1.0</li>
         
         
     
@@ -280,9 +282,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.2.1" data-path="drivers-connectors.html">
+        <li class="chapter " data-level="2.2.1" data-path="../../api-drivers/drivers-connectors/drivers-connectors.md">
             
-                <a href="drivers-connectors.html">
+                <span>
             
                     
                     Drivers/Connectors
@@ -293,40 +295,40 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" >
+        <li class="chapter " data-level="2.2.2" data-path="../../api-drivers/graph.html">
             
-                <span>
+                <a href="../../api-drivers/graph.html">
             
                     
                     Graph
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" >
+        <li class="chapter " data-level="2.2.3" data-path="../../api-drivers/vertex.html">
             
-                <span>
+                <a href="../../api-drivers/vertex.html">
             
                     
                     Vertex
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" >
+        <li class="chapter " data-level="2.2.4" data-path="../../api-drivers/edge.html">
             
-                <span>
+                <a href="../../api-drivers/edge.html">
             
                     
                     Edge
             
-                </span>
+                </a>
             
 
             
@@ -345,9 +347,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.6" data-path="../gremlin.html">
+        <li class="chapter " data-level="2.2.6" data-path="../../api-drivers/gremlin.html">
             
-                <a href="../gremlin.html">
+                <a href="../../api-drivers/gremlin.html">
             
                     
                     Gremlin Queries
@@ -403,9 +405,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="../../compute/compute-server/trueno-compute-server.html">
+        <li class="chapter " data-level="2.3.1" data-path="../compute-server/trueno-compute-server.html">
             
-                <a href="../../compute/compute-server/trueno-compute-server.html">
+                <a href="../compute-server/trueno-compute-server.html">
             
                     
                     Trueno's Compute Server
@@ -416,9 +418,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2" data-path="../../compute/algorithms/algorithms.html">
+        <li class="chapter " data-level="2.3.2" data-path="algorithms.html">
             
-                <a href="../../compute/algorithms/algorithms.html">
+                <a href="algorithms.html">
             
                     
                     Algorithms
@@ -430,9 +432,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.2.1" data-path="../../compute/algorithms/pagerank.html">
+        <li class="chapter " data-level="2.3.2.1" data-path="pagerank.html">
             
-                <a href="../../compute/algorithms/pagerank.html">
+                <a href="pagerank.html">
             
                     
                     PageRank
@@ -443,9 +445,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2.2" data-path="../../compute/algorithms/connected-components.html">
+        <li class="chapter " data-level="2.3.2.2" data-path="connected-components.html">
             
-                <a href="../../compute/algorithms/connected-components.html">
+                <a href="connected-components.html">
             
                     
                     Connected Components
@@ -456,12 +458,25 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2.3" data-path="../../compute/algorithms/triangle-counting.html">
+        <li class="chapter " data-level="2.3.2.3" data-path="triangle-counting.html">
             
-                <a href="../../compute/algorithms/triangle-counting.html">
+                <a href="triangle-counting.html">
             
                     
                     Triangle Counting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3.2.4" data-path="clustering.html">
+            
+                <a href="clustering.html">
+            
+                    
+                    Clustering
             
                 </a>
             
@@ -626,7 +641,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >Drivers/Connectors</a>
+        <a href="../../.." >Clustering</a>
     </h1>
 </div>
 
@@ -641,31 +656,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="driversconnectors">Drivers/Connectors</h1>
+                                <h1 id="clustering-algorithms">Clustering Algorithms</h1>
 <hr>
-<p>You can connect to <strong>Trueno</strong> from your favorite programming languaje.
-Current supported languajes are:</p>
-<ul>
-<li>Javascript/Node.js</li>
-<li>Java</li>
-<li>Python</li>
-</ul>
-<h2 id="examples">Examples</h2>
-<hr>
-<p><div class="codetabs"><div class="codetabs-header"><div class="tab active" data-codetab="0"><img src="../../../assets/icons/language-javascript.png">javascript</div><div class="tab" data-codetab="1"><img src="../../../assets/icons/language-java.png">java</div><div class="tab" data-codetab="2"><img src="../../../assets/icons/language-python.png">python</div></div><div class="codetabs-body"><div class="tab active" data-codetab="0"><pre><code class="lang-js"><span class="token comment" spellcheck="true">/* require if in node */</span>
-<span class="token keyword">const</span> Trueno <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;trueno-javascript-driver&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/* create driver instance */</span>
-<span class="token keyword">let</span> trueno <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Trueno</span><span class="token punctuation">(</span><span class="token punctuation">{</span>host<span class="token punctuation">:</span> <span class="token string">&apos;http://localhost&apos;</span><span class="token punctuation">,</span> port<span class="token punctuation">:</span> <span class="token number">8000</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/* connecting to trueno backend */</span>
-trueno<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-  <span class="token comment" spellcheck="true">/* connected, s is a socket */</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;connected&apos;</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-  <span class="token comment" spellcheck="true">/* disconnected from trueno backend */</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;disconnected&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><div class="tab" data-codetab="1"><pre><code class="lang-java">System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;TODO&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><div class="tab" data-codetab="2"><pre><code class="lang-py"><span class="token keyword">print</span> <span class="token string">&quot;TODO&quot;</span></code></pre></div></div></div></p>
+<h2 id="average-clustering">Average Clustering</h2>
+<p>This algorithm computes the average clustering coefficient of a graph <strong>G</strong>.
+The clustering coefficient (Watts-Strogatz), when applied to a single node, is a measure of how complete the neighborhood of a node is. When applied to an entire network, it is the average clustering coefficient over all of the nodes in the network.</p>
+<h2 id="clustering">Clustering</h2>
+<p>The clustering coefficient (<strong>Watts-Strogatz</strong>), when applied to a single node, is a measure of how complete the neighborhood of a node is. When applied to an entire network, it is the average clustering coefficient over all of the nodes in the network.</p>
+<p>The global clustering coefficient is based on triplets of nodes [1,2]. A triplet consists of three connected nodes. A triangle therefore includes three closed triplets, one centered on each of the nodes (n.b. this means the three triplets in a triangle come from overlapping selections of nodes). The global clustering coefficient is the number of closed triplets (or 3 x triangles) over the total number of triplets (both open and closed).</p>
+<h2 id="square-clustering">Square Clustering</h2>
+<p>Compute the squares clustering coefficient for nodes.</p>
+<h2 id="transitivity">Transitivity</h2>
+<p>Compute graph transitivity, the fraction of all possible triangles present in G.</p>
+<h3 id="references">References</h3>
+<ol>
+<li>D. J. Watts and Steven Strogatz (June 1998). &quot;Collective dynamics of &apos;small-world&apos; networks&quot;</li>
+<li><a href="https://en.wikipedia.org/wiki/Clustering_coefficient" target="_blank">https://en.wikipedia.org/wiki/Clustering_coefficient</a></li>
+</ol>
 
                                 
                                 </section>
@@ -693,6 +700,10 @@ trueno<span class="token punctuation">.</span><span class="token function">conne
 
             
                 
+                <a href="triangle-counting.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Triangle Counting">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
                 
             
         
@@ -701,7 +712,7 @@ trueno<span class="token punctuation">.</span><span class="token function">conne
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Drivers/Connectors","level":"2.2.1","depth":2,"next":{"title":"Graph","level":"2.2.2","depth":2,"ref":"","articles":[]},"previous":{"title":"API & Drivers","level":"2.2","depth":1,"ref":"","articles":[{"title":"Drivers/Connectors","level":"2.2.1","depth":2,"path":"pages/api-drivers/drivers-connectors/drivers-connectors.md","ref":"pages/api-drivers/drivers-connectors/drivers-connectors.md","articles":[]},{"title":"Graph","level":"2.2.2","depth":2,"ref":"","articles":[]},{"title":"Vertex","level":"2.2.3","depth":2,"ref":"","articles":[]},{"title":"Edge","level":"2.2.4","depth":2,"ref":"","articles":[]},{"title":"Batch Operations","level":"2.2.5","depth":2,"ref":"","articles":[]},{"title":"Gremlin Queries","level":"2.2.6","depth":2,"path":"pages/api-drivers/gremlin.md","ref":"pages/api-drivers/gremlin.md","articles":[]},{"title":"SQL Queries","level":"2.2.7","depth":2,"ref":"","articles":[]},{"title":"Compute API","level":"2.2.8","depth":2,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/api-drivers/drivers-connectors/drivers-connectors.md","mtime":"2016-11-14T03:32:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-17T06:27:39.522Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Clustering","level":"2.3.2.4","depth":3,"next":{"title":"Recipes","level":"2.4","depth":1,"ref":"","articles":[]},"previous":{"title":"Triangle Counting","level":"2.3.2.3","depth":3,"path":"pages/compute/algorithms/triangle-counting.md","ref":"pages/compute/algorithms/triangle-counting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/compute/algorithms/clustering.md","mtime":"2016-11-22T06:34:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T08:02:58.034Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

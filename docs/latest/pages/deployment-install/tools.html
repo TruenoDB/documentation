@@ -95,7 +95,7 @@
 
     
         
-        <li class="header">Version 1.0.0</li>
+        <li class="header">Version 0.1.0</li>
         
         
     
@@ -282,9 +282,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.html">
+        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.md">
             
-                <a href="../api-drivers/drivers-connectors/drivers-connectors.html">
+                <span>
             
                     
                     Drivers/Connectors
@@ -295,40 +295,40 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" >
+        <li class="chapter " data-level="2.2.2" data-path="../api-drivers/graph.html">
             
-                <span>
+                <a href="../api-drivers/graph.html">
             
                     
                     Graph
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" >
+        <li class="chapter " data-level="2.2.3" data-path="../api-drivers/vertex.html">
             
-                <span>
+                <a href="../api-drivers/vertex.html">
             
                     
                     Vertex
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" >
+        <li class="chapter " data-level="2.2.4" data-path="../api-drivers/edge.html">
             
-                <span>
+                <a href="../api-drivers/edge.html">
             
                     
                     Edge
             
-                </span>
+                </a>
             
 
             
@@ -464,6 +464,19 @@
             
                     
                     Triangle Counting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.4" data-path="../compute/algorithms/clustering.html">
+            
+                <a href="../compute/algorithms/clustering.html">
+            
+                    
+                    Clustering
             
                 </a>
             
@@ -646,23 +659,25 @@
                                 <h1 id="tools"><img src="../../assets/icons/wrench.png" alt="">Tools</h1>
 <hr>
 <h3 id="monitoring"><img src="../../assets/icons/chart-bar.png" alt="">Monitoring</h3>
-<p>The if you want to inspect the output and how the components are running, execute the <strong>tools</strong> command with serveral utilities.</p>
-<p>The following command will check Trueno&apos;s current status.</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --status
+<p>To inspect the status of all the running Trueno components are running, use the <strong>tools</strong> command.</p>
+<p>To check Trueno&apos;s current status:</p>
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --status
 </code></pre>
-<p>The following command will start the Trueno monitor in <strong>simple</strong> mode where you will see all the components usage and other useful information.</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --monitor s
+<p>To start the Trueno monitor in <strong>simple</strong> mode: </p>
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --monitor s
 </code></pre>
-<p>The following command will start the Trueno monitor in <strong>advanced</strong> mode where you will see advanced information and the console output of each component.</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --monitor a
+<p><strong>Simple</strong> mode will show the current usage of all components and other status information.</p>
+<p>To start the Trueno monitor in <strong>advanced</strong> mode: </p>
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --monitor a
 </code></pre>
+<p><strong>Advanced</strong> mode will show you detailed information and log output of each component.</p>
 <h3 id="misc"><img src="../../assets/icons/broom.png" alt="">Misc</h3>
-<p>Trueno tools provides some extra functionality which are useful but dangerous. Please analyze the situation before using these commands.</p>
-<p>The following command will <strong>wipe</strong> all default data directory from Trueno.</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --clear
+<p>Trueno tools provides some extra functionality that must be used with caution. </p>
+<p>To <strong>wipe</strong> all data from the Trueno installation.</p>
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --clear
 </code></pre>
-<p>The following command will clear all logs from the Trueno Core and internal components:</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --flush
+<p>To clear all logs from the Trueno Core and internal components:</p>
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --flush
 </code></pre>
 
                                 
@@ -703,7 +718,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tools","level":"2.1.8","depth":2,"next":{"title":"API & Drivers","level":"2.2","depth":1,"ref":"","articles":[{"title":"Drivers/Connectors","level":"2.2.1","depth":2,"path":"pages/api-drivers/drivers-connectors/drivers-connectors.md","ref":"pages/api-drivers/drivers-connectors/drivers-connectors.md","articles":[]},{"title":"Graph","level":"2.2.2","depth":2,"ref":"","articles":[]},{"title":"Vertex","level":"2.2.3","depth":2,"ref":"","articles":[]},{"title":"Edge","level":"2.2.4","depth":2,"ref":"","articles":[]},{"title":"Batch Operations","level":"2.2.5","depth":2,"ref":"","articles":[]},{"title":"Gremlin Queries","level":"2.2.6","depth":2,"path":"pages/api-drivers/gremlin.md","ref":"pages/api-drivers/gremlin.md","articles":[]},{"title":"SQL Queries","level":"2.2.7","depth":2,"ref":"","articles":[]},{"title":"Compute API","level":"2.2.8","depth":2,"ref":"","articles":[]}]},"previous":{"title":"Load Balancing","level":"2.1.7","depth":2,"path":"pages/deployment-install/load-balancing.md","ref":"pages/deployment-install/load-balancing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/tools.md","mtime":"2016-11-17T01:14:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-17T06:27:39.522Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tools","level":"2.1.8","depth":2,"next":{"title":"API & Drivers","level":"2.2","depth":1,"ref":"","articles":[{"title":"Drivers/Connectors","level":"2.2.1","depth":2,"path":"pages/api-drivers/drivers-connectors/drivers-connectors.md","ref":"pages/api-drivers/drivers-connectors/drivers-connectors.md","articles":[]},{"title":"Graph","level":"2.2.2","depth":2,"path":"pages/api-drivers/graph.md","ref":"pages/api-drivers/graph.md","articles":[]},{"title":"Vertex","level":"2.2.3","depth":2,"path":"pages/api-drivers/vertex.md","ref":"pages/api-drivers/vertex.md","articles":[]},{"title":"Edge","level":"2.2.4","depth":2,"path":"pages/api-drivers/edge.md","ref":"pages/api-drivers/edge.md","articles":[]},{"title":"Batch Operations","level":"2.2.5","depth":2,"ref":"","articles":[]},{"title":"Gremlin Queries","level":"2.2.6","depth":2,"path":"pages/api-drivers/gremlin.md","ref":"pages/api-drivers/gremlin.md","articles":[]},{"title":"SQL Queries","level":"2.2.7","depth":2,"ref":"","articles":[]},{"title":"Compute API","level":"2.2.8","depth":2,"ref":"","articles":[]}]},"previous":{"title":"Load Balancing","level":"2.1.7","depth":2,"path":"pages/deployment-install/load-balancing.md","ref":"pages/deployment-install/load-balancing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/tools.md","mtime":"2016-11-22T07:34:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T08:02:58.034Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

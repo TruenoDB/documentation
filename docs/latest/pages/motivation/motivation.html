@@ -97,7 +97,7 @@
 
     
         
-        <li class="header">Version 1.0.0</li>
+        <li class="header">Version 0.1.0</li>
         
         
     
@@ -284,9 +284,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.html">
+        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.md">
             
-                <a href="../api-drivers/drivers-connectors/drivers-connectors.html">
+                <span>
             
                     
                     Drivers/Connectors
@@ -297,40 +297,40 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" >
+        <li class="chapter " data-level="2.2.2" data-path="../api-drivers/graph.html">
             
-                <span>
+                <a href="../api-drivers/graph.html">
             
                     
                     Graph
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" >
+        <li class="chapter " data-level="2.2.3" data-path="../api-drivers/vertex.html">
             
-                <span>
+                <a href="../api-drivers/vertex.html">
             
                     
                     Vertex
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" >
+        <li class="chapter " data-level="2.2.4" data-path="../api-drivers/edge.html">
             
-                <span>
+                <a href="../api-drivers/edge.html">
             
                     
                     Edge
             
-                </span>
+                </a>
             
 
             
@@ -466,6 +466,19 @@
             
                     
                     Triangle Counting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.4" data-path="../compute/algorithms/clustering.html">
+            
+                <a href="../compute/algorithms/clustering.html">
+            
+                    
+                    Clustering
             
                 </a>
             
@@ -649,8 +662,8 @@
 <hr>
 <p>Trueno came to fruition because of the following arguments and needs:</p>
 <ul>
-<li>As <strong>2016</strong>, there are not enough graphs databases out there.</li>
-<li>Current solutions are either:<ul>
+<li>As <strong>2016</strong>, there&apos;s not a wide variety of graphs databases available.</li>
+<li>Existing solutions are either:<ul>
 <li><strong>Hard to setup and deploy</strong>.</li>
 <li>Propietary and closed source.</li>
 <li>Not free(many with the distributed version)</li>
@@ -658,30 +671,31 @@
 <li>Does not support large range of applications.</li>
 </ul>
 </li>
-<li>The pipeline of graph analysis is slow and ineficient. This usually consist of:<ol>
+<li>The pipeline of graph analysis is slow and inefficient. This usually consist of:<ol>
 <li>Parse graph data, or build graph models.</li>
 <li>Store into a graph database, in files, or not store the data at all.</li>
-<li>Write a program to analyse the graph, or use a graph processing famework such as <a href="http://spark.apache.org/graphx/" target="_blank">GraphX</a>, <a href="http://giraph.apache.org/" target="_blank">Giraph</a>, and <a href="https://turi.com/" target="_blank">GraphLab</a>.</li>
-<li>Store the results back to disk or get not persisted results.</li>
-<li>If additional analysis is required, repeat from step 1, 2, or 3.</li>
+<li>Write a program to analyze the graph, or use a graph processing framework such as <a href="http://spark.apache.org/graphx/" target="_blank">GraphX</a>, <a href="http://giraph.apache.org/" target="_blank">Giraph</a>, and <a href="https://turi.com/" target="_blank">GraphLab</a>.</li>
+<li>Store the results back to disk or get temporary results.</li>
+<li>Repeat this process with the temporary data if additional analysis is required.</li>
 </ol>
 </li>
 <li>The previous pipeline can take days or weeks to accomplish, and even more if advanced and repetitive analysis is required.</li>
-<li>Build new graph algorithms and deploy distributively is hard, time consuming, and not community friendy since solutions are sparsed through repositories or not shared at all.</li>
-<li>Current solutions require average to high computer science knowledge. Experts in other fields usually require addional help to deploy and analyze graphs.</li>
+<li>Building new graph algorithms and deploying them distributively is hard, time consuming, and not community friendly since solutions are scattered through repositories or not available to the public.</li>
+<li>Current solutions require average to high computer science knowledge. Experts in other fields usually require additional help to deploy and analyze graphs.</li>
 </ul>
 <h2 id="what-trueno-aims-for">What Trueno aims for?</h2>
-<p>This project was build by a group of Doctoral and Master Students at <img src="../../assets/icons/school.png" alt=""><a href="https://www.cs.purdue.edu/" target="_blank"><strong>Purdue CS</strong></a> with the only goal of accelerate graph based applications, analysis, and scientific applications. Furthermore, we decide that Trueno MUST meet the following charasteristics to address the previous needs and arguments:</p>
+<p>This project was build by a group of Doctoral and Master Students at <img src="../../assets/icons/school.png" alt=""><a href="https://www.cs.purdue.edu/" target="_blank"><strong>Purdue CS</strong></a> 
+with the goal of accelerating graph based applications and analysis. Trueno was started taking in consideration 
+the following characteristics to address the previous needs and arguments:</p>
 <ul>
-<li>Must be <strong>easy</strong> to deploy and getting started. As less configuration as possible.</li>
-<li>Must be able to handle small and large graph data.</li>
-<li>Must be open source and free.</li>
-<li>Must be flexible and support broad range of applications.</li>
-<li>Must be extendable and easy to modify(add new features).</li>
-<li>Must be able to <strong>process graph algorithms</strong> using the stored data.</li>
-<li>Must provide a <strong>plugable graph algorithm</strong> mechanism with global repository for easy extensibility and reusability(<strong>under construction</strong>)</li>
-<li>Must be easy to integrate with other graph tools such as <a href="https://gephi.org/" target="_blank">Gephi</a>, <a href="http://tinkerpop.apache.org/gremlin.html" target="_blank">Gremlin</a>, <a href="http://www.cytoscape.org/" target="_blank">Cytoscape</a>, etc.</li>
-<li>Must be simple enough such that profesionals in other fields with not advanced coding skills can use it efficiently.</li>
+<li><strong>Easy</strong> to deploy and run, involving the least configuration possible from the user.</li>
+<li>Able to handle small and large graph data.</li>
+<li>Open source and free.</li>
+<li>Support a broad range of applications.</li>
+<li>Provide extensibility via a plugin system for new graph algorithms and a global repository.(<strong>under construction</strong>)</li>
+<li><strong>Process graph algorithms</strong> on the stored graph data.</li>
+<li>Easy to integrate with other graph analysis tools such as <a href="https://gephi.org/" target="_blank">Gephi</a>, <a href="http://tinkerpop.apache.org/gremlin.html" target="_blank">Gremlin</a>, <a href="http://www.cytoscape.org/" target="_blank">Cytoscape</a>, etc.</li>
+<li>Users should not need to learn how to code in a programming language to exploit all the features Trueno provides.</li>
 </ul>
 
                                 
@@ -726,7 +740,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Motivation","level":"1.2","depth":1,"next":{"title":"Quick Start","level":"1.3","depth":1,"path":"pages/quick-start/quick-start-commands.md","ref":"pages/quick-start/quick-start-commands.md","articles":[]},"previous":{"title":"Trueno","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/motivation/motivation.md","mtime":"2016-11-17T01:14:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-17T06:27:39.522Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Motivation","level":"1.2","depth":1,"next":{"title":"Quick Start","level":"1.3","depth":1,"path":"pages/quick-start/quick-start-commands.md","ref":"pages/quick-start/quick-start-commands.md","articles":[]},"previous":{"title":"Trueno","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/motivation/motivation.md","mtime":"2016-11-22T07:24:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T08:02:58.034Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

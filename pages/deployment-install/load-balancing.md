@@ -1,12 +1,14 @@
-# ![](/assets/icons/scale-balance.png)Load Balancing
+# ![](../../assets/icons/scale-balance.png)Load Balancing
 
 ---
 
-In the [Cluster Deployment](distributed-deployment.html) section we setup a cluster with 4 machines which can receive read/write request at any time. Let say we want to load balance request among these machines and abstract the user to connect to just one machine.
+In the [Cluster Deployment](distributed-deployment.html) section we setup a cluster with 4 machines which can receive 
+read/write request at any time. Let say we want to load balance request among these machines and abstract the user to 
+connect to just one machine.
 
 We pick one of the machines, preferable a new one, say machine **192.168.1.44** to deploy our load balancer. We need an aditional json file that will map to all machines in the cluster:
 
-![](/assets/icons/json.png) **balancer.json**
+![](../../assets/icons/json.png) **balancer.json**
 ```json
 {
   "sourcePort": 8000,

@@ -1,14 +1,17 @@
-# ![](/assets/icons/update.png)Update
+# ![](../../assets/icons/update.png)Update
 
 ---
 
-To update trueno, just execute the following command which will update the global NPM package:
+To update Trueno, execute the following command:
 
   ```bash
   > npm update -g trueno
   ```
 
-**NOTE**: If you where using trueno without the **--dir** flag, all the data will be wipped out along with the installation. If you want to keep the date either use the **--dir** flag or go to:
+This will update the global NPM package.
+
+**NOTE**: If you are using Trueno without the **--dir** flag, all the existing data will be wiped along with the installation. 
+If you wish to keep the data either use the **--dir** flag or go to:
 
 > path/to/global/node_modules/trueno/lib/core/data
 

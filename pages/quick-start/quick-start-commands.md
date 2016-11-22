@@ -1,8 +1,8 @@
-#![](/assets/icons/clock-fast.png)Quick Start
+#![](../../assets/icons/clock-fast.png)Quick Start
 
 ---
 
-You can get started with Trueno pretty easy and fast. You just need a few dependencies:
+It is fast and easy to get started with Trueno. Here's what you'll need:
 
 ## Dependencies
 
@@ -12,7 +12,7 @@ You can get started with Trueno pretty easy and fast. You just need a few depend
 
 ## Installing and running Trueno
 
-1. First, install **Trueno** globally from npm:
+1. Install **Trueno** globally from npm:
 
   ```bash
   > npm install -g trueno
@@ -24,20 +24,20 @@ You can get started with Trueno pretty easy and fast. You just need a few depend
   > trueno setup
   ```
 
-3. Run trueno single instance:
+3. Run Trueno in single instance:
 
   ```bash
   > trueno start
   ```
 
 
-Thats it! you should have Trueno up and running by now. Go to your **browser** to visit the web console at:
+Thats it! You should have Trueno up and running!. 
+Go to your **browser** to visit the web console at:
 
 ```
 http://localhost:8000
 ```
 
-You should see the following web page:
+You will see the following web page:
 
-![](/assets/images/webconsole-cluster.png)
-
+![](../../assets/images/webconsole-cluster.png)

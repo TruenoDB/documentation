@@ -1,40 +1,42 @@
-# ![](/assets/icons/wrench.png)Tools
+# ![](../../assets/icons/wrench.png)Tools
 
 ---
 
-### ![](/assets/icons/chart-bar.png)Monitoring
+### ![](../../assets/icons/chart-bar.png)Monitoring
 
-The if you want to inspect the output and how the components are running, execute the **tools** command with serveral utilities.
+To inspect the status of all the running Trueno components are running, use the **tools** command.
 
-The following command will check Trueno's current status.
+To check Trueno's current status:
 
   ```bash
   > trueno tools --status
   ```
 
-The following command will start the Trueno monitor in **simple** mode where you will see all the components usage and other useful information.
+To start the Trueno monitor in **simple** mode: 
 
   ```bash
   > trueno tools --monitor s
   ```
+**Simple** mode will show the current usage of all components and other status information.
 
-The following command will start the Trueno monitor in **advanced** mode where you will see advanced information and the console output of each component.
+To start the Trueno monitor in **advanced** mode: 
 
   ```bash
   > trueno tools --monitor a
   ```
+**Advanced** mode will show you detailed information and log output of each component.
 
-### ![](/assets/icons/broom.png)Misc
+### ![](../../assets/icons/broom.png)Misc
 
-Trueno tools provides some extra functionality which are useful but dangerous. Please analyze the situation before using these commands.
+Trueno tools provides some extra functionality that must be used with caution. 
 
-The following command will **wipe** all default data directory from Trueno.
+To **wipe** all data from the Trueno installation.
 
   ```bash
   > trueno tools --clear
   ```
 
-The following command will clear all logs from the Trueno Core and internal components:
+To clear all logs from the Trueno Core and internal components:
 
   ```bash
   > trueno tools --flush

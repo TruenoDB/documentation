@@ -93,7 +93,7 @@
 
     
         
-        <li class="header">Version 1.0.0</li>
+        <li class="header">Version 0.1.0</li>
         
         
     
@@ -280,9 +280,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="drivers-connectors/drivers-connectors.html">
+        <li class="chapter " data-level="2.2.1" data-path="drivers-connectors/drivers-connectors.md">
             
-                <a href="drivers-connectors/drivers-connectors.html">
+                <span>
             
                     
                     Drivers/Connectors
@@ -293,40 +293,40 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" >
+        <li class="chapter " data-level="2.2.2" data-path="graph.html">
             
-                <span>
+                <a href="graph.html">
             
                     
                     Graph
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" >
+        <li class="chapter " data-level="2.2.3" data-path="vertex.html">
             
-                <span>
+                <a href="vertex.html">
             
                     
                     Vertex
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" >
+        <li class="chapter " data-level="2.2.4" data-path="edge.html">
             
-                <span>
+                <a href="edge.html">
             
                     
                     Edge
             
-                </span>
+                </a>
             
 
             
@@ -462,6 +462,19 @@
             
                     
                     Triangle Counting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.4" data-path="../compute/algorithms/clustering.html">
+            
+                <a href="../compute/algorithms/clustering.html">
+            
+                    
+                    Clustering
             
                 </a>
             
@@ -648,7 +661,7 @@
 <p>The default traversal language for Trueno Web Console is gremlin. Trueno relies on Gremlin Server to accept gremlin query request. Once the query is resolved, the results are shown in the Web Console. </p>
 <h2 id="java-programming-interface">Java Programming interface</h2>
 <h3 id="maven">Maven</h3>
-<pre><code class="lang-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+<pre class="language-"><code class="lang-xml language-">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.trueno<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>trueno-gremlin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>{version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
@@ -661,32 +674,32 @@
 </ul>
 <h3 id="connecting-to-the-database">Connecting to the database</h3>
 <ul>
-<li><p>Create an instance of <code>TruenoGraph</code>.</p>
-<pre><code class="lang-java">  Configuration config <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BaseConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  config<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>TruenoGraph<span class="token punctuation">.</span>CONFIG_SERVER<span class="token punctuation">,</span> <span class="token string">&quot;http://localhost&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  config<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>TruenoGraph<span class="token punctuation">.</span>CONFIG_PORT<span class="token punctuation">,</span> <span class="token number">8000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  config<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>TruenoGraph<span class="token punctuation">.</span>CONFIG_DATABASE<span class="token punctuation">,</span> <span class="token string">&quot;database&quot;</span><span class="token punctuation">)</span>
-  TruenoGraph graph <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TruenoGraph<span class="token punctuation">.</span>open</span><span class="token punctuation">(</span>config<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-</li>
-<li><p>Open a Trueno database. If the database does not exists in the backend, it will be created.</p>
-<pre><code class="lang-java">  graph<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token comment" spellcheck="true">// get an instance of the graph database</span>
-      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>conn <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-          <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-          <span class="token punctuation">}</span><span class="token punctuation">)</span>
-      <span class="token comment" spellcheck="true">// fail to open the database instance</span>
-      <span class="token punctuation">.</span><span class="token function">fail</span><span class="token punctuation">(</span>ex <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-          <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-          <span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
-</li>
+<li>Create an instance of <code class="language-">TruenoGraph</code>.</li>
 </ul>
+<pre class="language-"><code class="lang-java language-">    Configuration config <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BaseConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    config<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>TruenoGraph<span class="token punctuation">.</span>CONFIG_SERVER<span class="token punctuation">,</span> <span class="token string">&quot;http://localhost&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    config<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>TruenoGraph<span class="token punctuation">.</span>CONFIG_PORT<span class="token punctuation">,</span> <span class="token number">8000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    config<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>TruenoGraph<span class="token punctuation">.</span>CONFIG_DATABASE<span class="token punctuation">,</span> <span class="token string">&quot;database&quot;</span><span class="token punctuation">)</span>
+    TruenoGraph graph <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TruenoGraph<span class="token punctuation">.</span>open</span><span class="token punctuation">(</span>config<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>Open a Trueno database. If the database does not exists in the backend, it will be created.</li>
+</ul>
+<pre class="language-"><code class="lang-java language-">    graph<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">// get an instance of the graph database</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>conn <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">// fail to open the database instance</span>
+        <span class="token punctuation">.</span><span class="token function">fail</span><span class="token punctuation">(</span>ex <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
 <h3 id="working-with-graph-elements">Working with graph elements</h3>
 <ul>
 <li>Create a <a href="http://tinkerpop.apache.org/javadocs/current/core/org/apache/tinkerpop/gremlin/structure/Vertex.html" target="_blank">Vertex</a> in the current graph, using <a href="http://tinkerpop.apache.org/javadocs/current/core/org/apache/tinkerpop/gremlin/structure/Graph.html#addVertex-java.lang.Object...-" target="_blank">Graph.addVertex()</a> method.</li>
 </ul>
-<pre><code class="lang-java">    <span class="token comment" spellcheck="true">// create a vertex with identifier 1</span>
+<pre class="language-"><code class="lang-java language-">    <span class="token comment" spellcheck="true">// create a vertex with identifier 1</span>
     Vertex v1 <span class="token operator">=</span> graph<span class="token punctuation">.</span><span class="token function">addVertex</span><span class="token punctuation">(</span>T<span class="token punctuation">.</span>id<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Alice&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment" spellcheck="true">// create a vertex using a label</span>
@@ -695,24 +708,24 @@
 <ul>
 <li>Create a <a href="http://tinkerpop.apache.org/javadocs/current/core/org/apache/tinkerpop/gremlin/structure/Edge.html" target="_blank">Edge</a> to a vertex, using <a href="http://tinkerpop.apache.org/javadocs/current/core/org/apache/tinkerpop/gremlin/structure/Vertex.html#addEdge-java.lang.String-org.apache.tinkerpop.gremlin.structure.Vertex-java.lang.Object...-" target="_blank">Vertex.addEdge()</a> method.</li>
 </ul>
-<pre><code class="lang-java">    <span class="token comment" spellcheck="true">// create an edge from v1 to v2, with label &quot;knows&quot; and property &quot;since&quot;</span>
+<pre class="language-"><code class="lang-java language-">    <span class="token comment" spellcheck="true">// create an edge from v1 to v2, with label &quot;knows&quot; and property &quot;since&quot;</span>
     Edge g <span class="token operator">=</span> v1<span class="token punctuation">.</span><span class="token function">addVertex</span><span class="token punctuation">(</span><span class="token string">&quot;knows&quot;</span><span class="token punctuation">,</span> v2<span class="token punctuation">,</span> <span class="token string">&quot;since&quot;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="traversal">Traversal</h3>
 <ul>
 <li>Look up for a vertex.</li>
 </ul>
-<pre><code class="lang-java">    GraphTraversalSource g <span class="token operator">=</span> graph<span class="token punctuation">.</span><span class="token function">traversal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java language-">    GraphTraversalSource g <span class="token operator">=</span> graph<span class="token punctuation">.</span><span class="token function">traversal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     Vertex bob <span class="token operator">=</span> g<span class="token punctuation">.</span><span class="token function">V</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <ul>
-<li>Look up for the neighbors of a vertex.<pre><code class="lang-java">  g<span class="token punctuation">.</span><span class="token function">V</span><span class="token punctuation">(</span>bob<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">outV</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">valueMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEachRemaining</span><span class="token punctuation">(</span>value <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-</li>
+<li>Look up for the neighbors of a vertex.</li>
 </ul>
-<p>More examples can be found in the <a href="https://github.com/TruenoDB/trueno-gremlin/tree/dev/src/main/java/org/trueno/gremlin/examples" target="_blank">github repository</a>. A complete reference of the traversal language can be found in <a href="http://tinkerpop.apache.org/docs/current/reference/#traversal" target="_blank">Apache TinkerPop Documentation</a>.</p>
+<pre class="language-"><code class="lang-java language-">    g<span class="token punctuation">.</span><span class="token function">V</span><span class="token punctuation">(</span>bob<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">outV</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">valueMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEachRemaining</span><span class="token punctuation">(</span>value <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>More examples can be found in the <a href="https://github.com/TruenoDB/trueno-gremlin/tree/dev/src/main/java/org/trueno/gremlin/examples" target="_blank">github repository</a>. A complete reference of the gremlin traversal language can be found in the <a href="http://tinkerpop.apache.org/docs/current/reference/#traversal" target="_blank">Apache TinkerPop Documentation</a>.</p>
 
                                 
                                 </section>
@@ -748,7 +761,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gremlin Queries","level":"2.2.6","depth":2,"next":{"title":"SQL Queries","level":"2.2.7","depth":2,"ref":"","articles":[]},"previous":{"title":"Batch Operations","level":"2.2.5","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/api-drivers/gremlin.md","mtime":"2016-11-17T01:14:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-17T06:27:39.522Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gremlin Queries","level":"2.2.6","depth":2,"next":{"title":"SQL Queries","level":"2.2.7","depth":2,"ref":"","articles":[]},"previous":{"title":"Batch Operations","level":"2.2.5","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/api-drivers/gremlin.md","mtime":"2016-11-22T06:34:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T08:02:58.034Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

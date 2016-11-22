@@ -97,7 +97,7 @@
 
     
         
-        <li class="header">Version 1.0.0</li>
+        <li class="header">Version 0.1.0</li>
         
         
     
@@ -284,9 +284,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.html">
+        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.md">
             
-                <a href="../api-drivers/drivers-connectors/drivers-connectors.html">
+                <span>
             
                     
                     Drivers/Connectors
@@ -297,40 +297,40 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" >
+        <li class="chapter " data-level="2.2.2" data-path="../api-drivers/graph.html">
             
-                <span>
+                <a href="../api-drivers/graph.html">
             
                     
                     Graph
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" >
+        <li class="chapter " data-level="2.2.3" data-path="../api-drivers/vertex.html">
             
-                <span>
+                <a href="../api-drivers/vertex.html">
             
                     
                     Vertex
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" >
+        <li class="chapter " data-level="2.2.4" data-path="../api-drivers/edge.html">
             
-                <span>
+                <a href="../api-drivers/edge.html">
             
                     
                     Edge
             
-                </span>
+                </a>
             
 
             
@@ -466,6 +466,19 @@
             
                     
                     Triangle Counting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.4" data-path="../compute/algorithms/clustering.html">
+            
+                <a href="../compute/algorithms/clustering.html">
+            
+                    
+                    Clustering
             
                 </a>
             
@@ -647,10 +660,12 @@
                                 
                                 <h1 id="load-balancing"><img src="../../assets/icons/scale-balance.png" alt="">Load Balancing</h1>
 <hr>
-<p>In the <a href="distributed-deployment.html">Cluster Deployment</a> section we setup a cluster with 4 machines which can receive read/write request at any time. Let say we want to load balance request among these machines and abstract the user to connect to just one machine.</p>
+<p>In the <a href="distributed-deployment.html">Cluster Deployment</a> section we setup a cluster with 4 machines which can receive 
+read/write request at any time. Let say we want to load balance request among these machines and abstract the user to 
+connect to just one machine.</p>
 <p>We pick one of the machines, preferable a new one, say machine <strong>192.168.1.44</strong> to deploy our load balancer. We need an aditional json file that will map to all machines in the cluster:</p>
 <p><img src="../../assets/icons/json.png" alt=""> <strong>balancer.json</strong></p>
-<pre><code class="lang-json"><span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-json language-"><span class="token punctuation">{</span>
   <span class="token property">&quot;sourcePort&quot;</span><span class="token operator">:</span> <span class="token number">8000</span><span class="token punctuation">,</span>
   <span class="token property">&quot;targets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
@@ -674,7 +689,7 @@
 </code></pre>
 <p>We can see that <strong>&apos;sourcePort&apos;</strong> is the port at the new balancing machine(<strong>192.168.1.44</strong>). <strong>&apos;targets&apos;</strong> are the machines in the cluster with their respective address and port.</p>
 <p>Now, at machine <strong>192.168.1.44</strong> execute:</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno balancer --start path/to/balancer.json
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno balancer --start path/to/balancer.json
 </code></pre>
 <p>You will see a message like the following:</p>
 <blockquote>
@@ -682,7 +697,7 @@
 </blockquote>
 <p>Now the you can connect using any <a href="../api-drivers/drivers-connectors/drivers-connectors.html">driver</a> to connect to this balancer, which will redirect the request to one of the cluster machines. You can also go to the Web Console accesing <strong>192.168.1.44:8000</strong> as if you where connecting to one of the cluster machines.</p>
 <p>The balancer process runs in the background, to stop the process, just execute:</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno balancer --stop
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno balancer --stop
 </code></pre>
 <p>You will see a message like the following:</p>
 <blockquote>
@@ -731,7 +746,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Load Balancing","level":"2.1.7","depth":2,"next":{"title":"Tools","level":"2.1.8","depth":2,"path":"pages/deployment-install/tools.md","ref":"pages/deployment-install/tools.md","articles":[]},"previous":{"title":"Cluster Deployment","level":"2.1.6","depth":2,"path":"pages/deployment-install/distributed-deployment.md","ref":"pages/deployment-install/distributed-deployment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/load-balancing.md","mtime":"2016-11-17T06:26:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-17T06:27:39.522Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Load Balancing","level":"2.1.7","depth":2,"next":{"title":"Tools","level":"2.1.8","depth":2,"path":"pages/deployment-install/tools.md","ref":"pages/deployment-install/tools.md","articles":[]},"previous":{"title":"Cluster Deployment","level":"2.1.6","depth":2,"path":"pages/deployment-install/distributed-deployment.md","ref":"pages/deployment-install/distributed-deployment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/load-balancing.md","mtime":"2016-11-22T07:42:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T08:02:58.034Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
