@@ -3,10 +3,12 @@
 ---
 
 In the [Cluster Deployment](distributed-deployment.html) section we setup a cluster with 4 machines which can receive 
-read/write request at any time. Let say we want to load balance request among these machines and abstract the user to 
-connect to just one machine.
+read/write request at any time. To balance the requests among these machines, a new or existing machine can be configured 
+to distribute requests among the all the machines.
 
-We pick one of the machines, preferable a new one, say machine **192.168.1.44** to deploy our load balancer. We need an aditional json file that will map to all machines in the cluster:
+Example:
+
+To deploy and activate a load balancer on a new machine with IP **192.168.1.44**, first a JSON configuration file is deployed:
 
 ![](../../assets/icons/json.png) **balancer.json**
 ```json
@@ -33,9 +35,10 @@ We pick one of the machines, preferable a new one, say machine **192.168.1.44** 
 }
 ```
 
-We can see that **'sourcePort'** is the port at the new balancing machine(**192.168.1.44**). **'targets'** are the machines in the cluster with their respective address and port.
+**sourcePort** is the port at the balancing machine(**192.168.1.44**).
+**'targets'** are the machines in the cluster with their respective addresses and ports.
 
-Now, at machine **192.168.1.44** execute:
+Next, execute:
 
   ```bash
   > trueno balancer --start path/to/balancer.json
@@ -45,9 +48,10 @@ You will see a message like the following:
 
 > [Success] Started loadbalancer - Logging to /path/to/global/node_modules/trueno/loadbalancer.out
 
-Now the you can connect using any [driver](../api-drivers/drivers-connectors/drivers-connectors.html) to connect to this balancer, which will redirect the request to one of the cluster machines. You can also go to the Web Console accesing **192.168.1.44:8000** as if you where connecting to one of the cluster machines.
+Now you can connect to any machine managed by the balancer using any of the [drivers](../api-drivers/drivers-connectors/drivers-connectors.html) 
+or by using the Web Console at **192.168.1.44:8000**.
 
-The balancer process runs in the background, to stop the process, just execute:
+The balancer process runs as a background process. To stop the balancer, execute:
 
   ```bash
   > trueno balancer --stop

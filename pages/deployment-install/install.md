@@ -2,7 +2,7 @@
 
 ---
 
-You can get started with Trueno pretty easy and fast. You just need a few dependencies:
+It is fast and easy to get started with Trueno. Here's what you'll need:
 
 ## Dependencies
 
@@ -10,9 +10,7 @@ You can get started with Trueno pretty easy and fast. You just need a few depend
 * **Node.js 6** with **npm** or later (we recommend to use [nvm](https://github.com/creationix/nvm#install-script))
 * **tar** and **unzip**
 
-After all dependencies are installed, you can get Trueno from [**NPM**](https://www.npmjs.com/).
-
-1. Install **Trueno** globally from npm:
+####After all dependencies are installed, you can get Trueno from [**NPM**](https://www.npmjs.com/).
 
   ```bash
   > npm install -g trueno
@@ -23,15 +21,13 @@ This will intall Trueno globally in your system. Verify by executing the help co
   > trueno --hep
   ```
 
-2. Download and install internal components:
+####Download and install internal components:
 
   ```bash
   > trueno setup
   ```
 
-  This command will take a while to complete depending on your internet connection speed and procesing power. The following components will be installed.
-
-### Internal Components
+  This command will take a while to complete depending on your internet connection speed and procesing power. The following components will be installed:
 
   - [Gremlin Server](https://tinkerpop.apache.org/): For the Gremlin Graph Traversal languaje.
   - [Elastic Search](https://www.elastic.co/): For indexing the graph data.
@@ -43,4 +39,3 @@ This will intall Trueno globally in your system. Verify by executing the help co
 
 
 After the setup is complete, you can start using Trueno.
-

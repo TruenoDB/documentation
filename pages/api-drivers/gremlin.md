@@ -1,5 +1,7 @@
 #Gremlin Queries
+
 ---
+
 **Trueno** offers an Apache TinkerPop 3.2.3 compatible API with OLTP support. Basically, meanning that gremlin traversal language can be used to query data from a Trueno database. The gremlin traversal language can be used either from **Trueno Web Console**, or using the **Java API**.
 
 ## Trueno Web Console

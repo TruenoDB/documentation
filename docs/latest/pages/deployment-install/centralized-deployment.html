@@ -97,7 +97,7 @@
 
     
         
-        <li class="header">Version 0.1.0</li>
+        <li class="header">Version 0.0.0</li>
         
         
     
@@ -284,9 +284,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.md">
+        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.html">
             
-                <span>
+                <a href="../api-drivers/drivers-connectors/drivers-connectors.html">
             
                     
                     Drivers/Connectors
@@ -662,10 +662,10 @@
 <hr>
 <p>This section servers as a guide to deploy Trueno in a single machine.</p>
 <p>Run trueno single instance:</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start
 </code></pre>
 <p>You will see a console output similar to the following:</p>
-<pre class="language-"><code class="lang-ruby language-">    info<span class="token punctuation">:</span> <span class="token constant">Sanity</span> check done<span class="token punctuation">,</span> all components present<span class="token punctuation">.</span>
+<pre><code class="lang-ruby">    info<span class="token punctuation">:</span> <span class="token constant">Sanity</span> check done<span class="token punctuation">,</span> all components present<span class="token punctuation">.</span>
     info<span class="token punctuation">:</span> <span class="token constant">Executing</span> <span class="token constant">Trueno</span> <span class="token constant">Components</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
     info<span class="token punctuation">:</span> <span class="token constant">Spark</span> <span class="token constant">Master</span> successfully started<span class="token operator">!</span>
     info<span class="token punctuation">:</span> <span class="token constant">Spark</span> <span class="token constant">Worker</span> successfully started<span class="token operator">!</span>
@@ -680,16 +680,18 @@
     info<span class="token punctuation">:</span> <span class="token constant">Cluster</span> status collected<span class="token punctuation">.</span>  _id<span class="token operator">=</span>localhost<span class="token punctuation">,</span> arch<span class="token operator">=</span><span class="token number">64</span><span class="token punctuation">,</span> model<span class="token operator">=</span><span class="token function">Intel</span><span class="token punctuation">(</span><span class="token constant">R</span><span class="token punctuation">)</span> <span class="token function">Core</span><span class="token punctuation">(</span><span class="token constant">TM</span><span class="token punctuation">)</span> i5<span class="token operator">-</span>5257U <span class="token constant">CPU</span> @ <span class="token number">2</span><span class="token punctuation">.</span>70GHz<span class="token punctuation">,</span> speed<span class="token operator">=</span><span class="token number">2700</span><span class="token punctuation">,</span> user<span class="token operator">=</span><span class="token number">181792530</span><span class="token punctuation">,</span> nice<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> sys<span class="token operator">=</span><span class="token number">116932760</span><span class="token punctuation">,</span> idle<span class="token operator">=</span><span class="token number">744926600</span><span class="token punctuation">,</span> irq<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> cores<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> network<span class="token operator">=</span>null<span class="token punctuation">,</span> freemem<span class="token operator">=</span><span class="token number">147283968</span><span class="token punctuation">,</span> hostname<span class="token operator">=</span>localhost<span class="token punctuation">,</span> platform<span class="token operator">=</span><span class="token constant">Node</span><span class="token punctuation">.</span>js<span class="token punctuation">,</span> totalmem<span class="token operator">=</span><span class="token number">8589934592</span><span class="token punctuation">,</span> uptime<span class="token operator">=</span><span class="token number">9068212</span><span class="token punctuation">,</span> osversion<span class="token operator">=</span><span class="token number">15.6</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token punctuation">,</span> version<span class="token operator">=</span><span class="token number">6.0</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token punctuation">,</span> os<span class="token operator">=</span><span class="token constant">OS</span> <span class="token constant">X</span><span class="token punctuation">,</span> <span class="token variable">$ref</span><span class="token operator">=</span>$<span class="token punctuation">[</span><span class="token string">&quot;_instance&quot;</span><span class="token punctuation">]</span>
     info<span class="token punctuation">:</span> <span class="token constant">PM2</span><span class="token operator">-</span><span class="token constant">UI</span> <span class="token constant">Monitor</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token constant">INFO</span><span class="token punctuation">]</span> <span class="token constant">Starting</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 </code></pre>
-<p>This will start Trueno as a single instance in the <strong>foreground</strong>. the default port is <strong>8000</strong> and the binded host will be localhost which is accesible locally. If Trueno must be accessed from outside your computer, you should use the <strong>-h</strong> flag to bind to a public address, for instance &apos;0.0.0.0&apos;(all interfaces).</p>
-<p>Lets say that you want to let Trueno running even when you close the terminal and exit your session. In the following example we do this by adding the <strong>forever</strong> flag.</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start --forever
+<p>This will start Trueno as a single instance. Trueno connects by default to the address <strong><a href="http://localhost:8000" target="_blank">http://localhost:8000</a></strong> 
+If Trueno must be accessed from outside your computer, you can use the <strong>-h</strong> flag to bind to a public address, 
+for instance &apos;0.0.0.0&apos; (all interfaces).</p>
+<p>If you want to run Trueno as a background process, the <strong>forever</strong> flag can be used.</p>
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start --forever
 </code></pre>
 <p>To stop Trueno, simply execute:</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno stop
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno stop
 </code></pre>
 <p>Trueno and all subcomponents will be stopped.</p>
-<p>The following is a complete example of starting Trueno in a single machine with all many useful flags and their explanation:</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start \
+<p>The following is a complete example of starting Trueno in a single machine with all available flags and their explanation:</p>
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start \
     -h <span class="token string">&apos;my_custom_host&apos;</span>
     -p 9999
     --dir /path/to/my/data/dir
@@ -744,7 +746,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Single Machine Deployment","level":"2.1.5","depth":2,"next":{"title":"Cluster Deployment","level":"2.1.6","depth":2,"path":"pages/deployment-install/distributed-deployment.md","ref":"pages/deployment-install/distributed-deployment.md","articles":[]},"previous":{"title":"Ports & Flags","level":"2.1.4","depth":2,"path":"pages/deployment-install/cli-flags-ports.md","ref":"pages/deployment-install/cli-flags-ports.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/centralized-deployment.md","mtime":"2016-11-22T06:34:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T08:02:58.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Single Machine Deployment","level":"2.1.5","depth":2,"next":{"title":"Cluster Deployment","level":"2.1.6","depth":2,"path":"pages/deployment-install/distributed-deployment.md","ref":"pages/deployment-install/distributed-deployment.md","articles":[]},"previous":{"title":"Ports & Flags","level":"2.1.4","depth":2,"path":"pages/deployment-install/cli-flags-ports.md","ref":"pages/deployment-install/cli-flags-ports.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/centralized-deployment.md","mtime":"2016-11-22T17:57:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T20:10:58.458Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,4 +1,4 @@
-# ![](/assets/icons/server-minus.png)Single Machine Deployment(Centralized)
+# ![](../../assets/icons/server-minus.png)Single Machine Deployment(Centralized)
 
 ---
 
@@ -30,9 +30,11 @@ You will see a console output similar to the following:
     info: PM2-UI Monitor: [INFO] Starting..
   ```
 
-This will start Trueno as a single instance in the **foreground**. the default port is **8000** and the binded host will be localhost which is accesible locally. If Trueno must be accessed from outside your computer, you should use the **-h** flag to bind to a public address, for instance '0.0.0.0'(all interfaces).
+This will start Trueno as a single instance. Trueno connects by default to the address **http://localhost:8000** 
+If Trueno must be accessed from outside your computer, you can use the **-h** flag to bind to a public address, 
+for instance '0.0.0.0' (all interfaces).
 
-Lets say that you want to let Trueno running even when you close the terminal and exit your session. In the following example we do this by adding the **forever** flag.
+If you want to run Trueno as a background process, the **forever** flag can be used.
 
   ```bash
   > trueno start --forever
@@ -46,7 +48,7 @@ To stop Trueno, simply execute:
 
 Trueno and all subcomponents will be stopped.
 
-The following is a complete example of starting Trueno in a single machine with all many useful flags and their explanation:
+The following is a complete example of starting Trueno in a single machine with all available flags and their explanation:
 
   ```bash
   > trueno start \
@@ -60,5 +62,3 @@ The following is a complete example of starting Trueno in a single machine with 
 - **p**: The external port for external driver connections, in this example **9999**.
 - **dir**: The data directory. All data will be stored in this directory.
 - **debug**: Print all output, including errors to console for all components.
-
-

@@ -97,7 +97,7 @@
 
     
         
-        <li class="header">Version 0.1.0</li>
+        <li class="header">Version 0.0.0</li>
         
         
     
@@ -284,9 +284,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="../../api-drivers/drivers-connectors/drivers-connectors.md">
+        <li class="chapter " data-level="2.2.1" data-path="../../api-drivers/drivers-connectors/drivers-connectors.html">
             
-                <span>
+                <a href="../../api-drivers/drivers-connectors/drivers-connectors.html">
             
                     
                     Drivers/Connectors
@@ -660,14 +660,16 @@
                                 
                                 <h1 id="pagerank">PageRank</h1>
 <hr>
-<p><strong>PageRank</strong> is a way to measure the <strong>&quot;authority&quot;</strong> of vertices in a graph [1]. A simplistic alternative to PageRank is to measure the in-degrees at each vertex.
+<p><strong>PageRank</strong> is a way to measure the <strong>&quot;authority&quot;</strong> of vertices in a graph [1]. A simplistic alternative to PageRank 
+is to measure the in-degrees at each vertex.
 The algorithm is describe as follows:</p>
 <ol>
 <li>Initialize the vertices with a starting PageRank of 1/N, where N is the number of vertices in the graph.</li>
 <li><p>Loop:</p>
 <ul>
 <li>For each vertex, transmit a PageRank of <strong>1/M</strong> along each outbound edge, where <strong>M</strong> is the outdegree of the vertex.</li>
-<li>At each vertex receiving incoming PageRanks from adjacent vertices, sum these up and make that the new PageRank for the vertex.</li>
+<li>At each vertex receiving incoming PageRanks from adjacent vertices, sum these up and make that the new PageRank 
+for the vertex.</li>
 <li>If PageRanks haven&apos;t significantly changed across the graph since the previous iteration, then exit.</li>
 </ul>
 <p><img src="../../../assets/images/compute/PageRank-iteration.png" alt="">
@@ -727,7 +729,7 @@ The algorithm is describe as follows:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PageRank","level":"2.3.2.1","depth":3,"next":{"title":"Connected Components","level":"2.3.2.2","depth":3,"path":"pages/compute/algorithms/connected-components.md","ref":"pages/compute/algorithms/connected-components.md","articles":[]},"previous":{"title":"Algorithms","level":"2.3.2","depth":2,"path":"pages/compute/algorithms/algorithms.md","ref":"pages/compute/algorithms/algorithms.md","articles":[{"title":"PageRank","level":"2.3.2.1","depth":3,"path":"pages/compute/algorithms/pagerank.md","ref":"pages/compute/algorithms/pagerank.md","articles":[]},{"title":"Connected Components","level":"2.3.2.2","depth":3,"path":"pages/compute/algorithms/connected-components.md","ref":"pages/compute/algorithms/connected-components.md","articles":[]},{"title":"Triangle Counting","level":"2.3.2.3","depth":3,"path":"pages/compute/algorithms/triangle-counting.md","ref":"pages/compute/algorithms/triangle-counting.md","articles":[]},{"title":"Clustering","level":"2.3.2.4","depth":3,"path":"pages/compute/algorithms/clustering.md","ref":"pages/compute/algorithms/clustering.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/compute/algorithms/pagerank.md","mtime":"2016-11-22T06:34:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T08:02:58.034Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PageRank","level":"2.3.2.1","depth":3,"next":{"title":"Connected Components","level":"2.3.2.2","depth":3,"path":"pages/compute/algorithms/connected-components.md","ref":"pages/compute/algorithms/connected-components.md","articles":[]},"previous":{"title":"Algorithms","level":"2.3.2","depth":2,"path":"pages/compute/algorithms/algorithms.md","ref":"pages/compute/algorithms/algorithms.md","articles":[{"title":"PageRank","level":"2.3.2.1","depth":3,"path":"pages/compute/algorithms/pagerank.md","ref":"pages/compute/algorithms/pagerank.md","articles":[]},{"title":"Connected Components","level":"2.3.2.2","depth":3,"path":"pages/compute/algorithms/connected-components.md","ref":"pages/compute/algorithms/connected-components.md","articles":[]},{"title":"Triangle Counting","level":"2.3.2.3","depth":3,"path":"pages/compute/algorithms/triangle-counting.md","ref":"pages/compute/algorithms/triangle-counting.md","articles":[]},{"title":"Clustering","level":"2.3.2.4","depth":3,"path":"pages/compute/algorithms/clustering.md","ref":"pages/compute/algorithms/clustering.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/compute/algorithms/pagerank.md","mtime":"2016-11-22T20:02:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T20:10:58.458Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

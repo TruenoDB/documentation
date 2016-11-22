@@ -1,8 +1,10 @@
 # Connected Components
----
-The connected components of an undirected graph are the equivalence classes of vertices under the "is reachable from" relation [1].
 
-![](/assets/images/compute/ConnectedComponents-example.png)
+---
+The connected components of an undirected graph are the equivalence classes of vertices under the "is reachable from" 
+relation [1].
+
+![](../../../assets/images/compute/ConnectedComponents-example.png)
 
 The graph has three components [1]. Connected Components are identified by the lowest vertex ID in the component.
 

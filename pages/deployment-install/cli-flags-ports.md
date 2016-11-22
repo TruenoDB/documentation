@@ -2,21 +2,21 @@
 
 ---
 
-## ![](/assets/icons/serial-port.png)Ports
+## ![](../../assets/icons/serial-port.png)Ports
 
-- ![](/assets/icons/serial-port.png) **8000**: Trueno default external port. This port will be exposed to external drivers.
-- ![](/assets/icons/serial-port.png) **8001**: Trueno internal port. This port is only used for internal system communication.
-- ![](/assets/icons/serial-port.png) **8002**: The Gremlin Server port.
-- ![](/assets/icons/serial-port.png) **8003**: Cassandra external port.
-- ![](/assets/icons/serial-port.png) **8004**: ElasticSearch external port.
-- ![](/assets/icons/serial-port.png) **8005**: Spark Master external port.
-- ![](/assets/icons/serial-port.png) **8006**: Spark Web UI port.
+- ![](../../assets/icons/serial-port.png) **8000**: Trueno default external port. This port will be exposed to external drivers.
+- ![](../../assets/icons/serial-port.png) **8001**: Trueno internal port. This port is only used for internal system communication.
+- ![](../../assets/icons/serial-port.png) **8002**: The Gremlin Server port.
+- ![](../../assets/icons/serial-port.png) **8003**: Cassandra external port.
+- ![](../../assets/icons/serial-port.png) **8004**: ElasticSearch external port.
+- ![](../../assets/icons/serial-port.png) **8005**: Spark Master external port.
+- ![](../../assets/icons/serial-port.png) **8006**: Spark Web UI port.
 
 **NOTE**: At the moment, the only configurable port is the Trueno default port(8000). If you need to change a certain port, edit directly the configuration file at:
 
 > path/to/global/node_modules/trueno/conf/trueno-config.yaml
 
-## ![](/assets/icons/flag.png)Flags
+## ![](../../assets/icons/flag.png)Flags
 
 Trueno has **5** main flags with subflags. The following is the description of each command:
 
@@ -26,7 +26,7 @@ Usage:
 > trueno <cmd>
 ```
 
-### ![](/assets/icons/flag.png) start
+### ![](../../assets/icons/flag.png) start
 
 Launch Trueno.
 
@@ -45,7 +45,7 @@ Launch Trueno.
     --cluster <hostsJSON>      Start the database in cluster mode with the provided hosts JSON
     --debug                    Show debug messages in the console
 
-### ![](/assets/icons/flag.png) stop
+### ![](../../assets/icons/flag.png) stop
 
 Stop Trueno(if running in daemon mode, otherwise Ctrl+C will stop the foreground process).
 
@@ -59,7 +59,7 @@ Stop Trueno(if running in daemon mode, otherwise Ctrl+C will stop the foreground
     -V, --version  output the version number
 
 
-### ![](/assets/icons/flag.png) setup
+### ![](../../assets/icons/flag.png) setup
 
 Install [internal components](install.html#internal-components).
 
@@ -75,7 +75,7 @@ Install [internal components](install.html#internal-components).
     --debug        Show debug messages in the console
 
 
-### ![](/assets/icons/flag.png) balancer
+### ![](../../assets/icons/flag.png) balancer
 
 Run Trueno load balancer. This will be used when running in [cluster mode](distributed-deployment.html) with multiple machines.
 
@@ -92,7 +92,7 @@ Run Trueno load balancer. This will be used when running in [cluster mode](distr
     --list             List running load balancers
     --generate <path>  Generate configuration template file to the desired path
 
-### ![](/assets/icons/flag.png) tools
+### ![](../../assets/icons/flag.png) tools
 
 Execute Trueno's utility tools.
 

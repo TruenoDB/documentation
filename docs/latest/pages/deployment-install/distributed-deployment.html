@@ -97,7 +97,7 @@
 
     
         
-        <li class="header">Version 0.1.0</li>
+        <li class="header">Version 0.0.0</li>
         
         
     
@@ -284,9 +284,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.md">
+        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.html">
             
-                <span>
+                <a href="../api-drivers/drivers-connectors/drivers-connectors.html">
             
                     
                     Drivers/Connectors
@@ -660,16 +660,16 @@
                                 
                                 <h1 id="cluster-deploymentdistributed"><img src="../../assets/icons/server.png" alt="">Cluster Deployment(Distributed)</h1>
 <hr>
-<p>This section describes how to deploy Trueno in a cluster environment, i.e. in multiple machines to handle higher amounts of graph data. In simple words, how to scale.</p>
+<p>This section describes how to deploy Trueno in a cluster environment, i.e. horizontal scaling.</p>
 <p>Important notes:</p>
 <ul>
-<li>Trueno has 3 distributed subcomponents that are resilient and distributed by design:<ul>
+<li>Trueno has 3 distributed sub-components that are resilient and distributed by design:<ul>
 <li>Apache Cassandra</li>
 <li>ElasticSearch</li>
 <li>Spark</li>
 </ul>
 </li>
-<li>When running Trueno in cluster mode, all machines will connect these subcomponents and create your cluster.</li>
+<li>When running Trueno in cluster mode, all machines will connect these sub-components and create your cluster.</li>
 <li>Any machine can receive and serve request, the backend storage will handle the <strong>persistence</strong>, <strong>consistency</strong>, <strong>sharding</strong>, and <strong>replication</strong>.</li>
 </ul>
 <p>In order to deploy Trueno in a distributed way you will need follow these steps:</p>
@@ -680,8 +680,9 @@
 <li>(optional) Run a load balancer to redirect request to all machines in a balanced way.</li>
 </ol>
 <h3 id="setup-guide">Setup Guide</h3>
-<p>Lets say you have 4 machines where you want to deploy your cluster, and you want to distribute the componenes by machines.</p>
-<p><strong>NOTE</strong>: you can run all subcomponents in all machines but the master that must be present in just one:</p>
+<p>In this example there are 4 machines where you want to deploy your cluster, and you want to distribute the components 
+between them.</p>
+<p><strong>NOTE</strong>: you can run all sub-components in all machines except the setup coordinator which must exist only in one machine:</p>
 <table>
 <thead>
 <tr>
@@ -723,38 +724,41 @@
 </tr>
 </tbody>
 </table>
-<p>The previous table shows how the subcomponents will be distribured by machine. Now lets show one necessary file we must have to deploy the cluster:</p>
+<p>The previous table shows how the sub-components will be distributed by machine. 
+To achieve this configuration, first a JSON configuration file is deployed in the cluster machines:</p>
 <p><img src="../../assets/icons/json.png" alt=""> <strong>cluster.json</strong></p>
-<pre class="language-"><code class="lang-json language-"><span class="token punctuation">{</span>
+<pre><code class="lang-json"><span class="token punctuation">{</span>
     <span class="token property">&quot;192.168.1.40&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">&quot;master&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token property">&quot;compute&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token property">&quot;192.168.1.41&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">&quot;compute&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span><span class="token property">&quot;backend&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token property">&quot;192.168.1.42&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">&quot;compute&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span><span class="token property">&quot;backend&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span><span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token property">&quot;192.168.1.43&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">&quot;compute&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span><span class="token property">&quot;backend&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span><span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>Copy this json file to all the machines and start the Trueno instances. Note that we must start the coordinator first which is <strong>192.168.1.40</strong>.</p>
-<p><strong>NOTE</strong>: The machine name on the json file <strong>must</strong> match the hostname when you start the instance(using the -h flag).</p>
+<p>After the configuration is deployed, start a Trueno instance on all machines.</p>
+<p><strong>NOTE</strong> The coordinator must be started first (in the JSON confguration example, <strong>192.168.1.40</strong>).</p>
+<p><strong>NOTE</strong>: The machine name on the JSON file <strong>must</strong> match the hostname when you start the instance (using the -h flag).</p>
 <p><strong>Step 1</strong></p>
 <p>At machine <strong>192.168.1.40</strong>:</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start -h 192.168.1.40 --cluster path/to/cluster.json
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start -h 192.168.1.40 --cluster path/to/cluster.json
 </code></pre>
 <p>You will see the following line in the console output:</p>
 <blockquote>
 <p>info: &gt;&gt; CLUSTER: Awaiting for cluster hosts ready signal</p>
 </blockquote>
 <p><strong>Step 2</strong></p>
-<p>At all other machines, start the trueno instance the same way:</p>
+<p>At all other machines, start the Trueno instance the same way:</p>
 <p>At machine <strong>192.168.1.41</strong>:</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start -h 192.168.1.41 --cluster path/to/cluster.json
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start -h 192.168.1.41 --cluster path/to/cluster.json
 </code></pre>
 <p>At machine <strong>192.168.1.42</strong>:</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start -h 192.168.1.42 --cluster path/to/cluster.json
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start -h 192.168.1.42 --cluster path/to/cluster.json
 </code></pre>
 <p>At machine <strong>192.168.1.43</strong>:</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start -h 192.168.1.43 --cluster path/to/cluster.json
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start -h 192.168.1.43 --cluster path/to/cluster.json
 </code></pre>
-<p>Now, at machine <strong>192.168.1.40</strong>(coordinator), you will see that the database
-will display a starting message. This means that the coordinator has connect all subcomponents and is ready to receive requests.</p>
+<p>Now, at machine <strong>192.168.1.40</strong> (coordinator), you will see that the database
+will display a starting message. This means that the coordinator has connected all sub-components and is ready to 
+receive requests.</p>
 
                                 
                                 </section>
@@ -798,7 +802,7 @@ will display a starting message. This means that the coordinator has connect all
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Cluster Deployment","level":"2.1.6","depth":2,"next":{"title":"Load Balancing","level":"2.1.7","depth":2,"path":"pages/deployment-install/load-balancing.md","ref":"pages/deployment-install/load-balancing.md","articles":[]},"previous":{"title":"Single Machine Deployment","level":"2.1.5","depth":2,"path":"pages/deployment-install/centralized-deployment.md","ref":"pages/deployment-install/centralized-deployment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/distributed-deployment.md","mtime":"2016-11-22T06:34:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T08:02:58.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cluster Deployment","level":"2.1.6","depth":2,"next":{"title":"Load Balancing","level":"2.1.7","depth":2,"path":"pages/deployment-install/load-balancing.md","ref":"pages/deployment-install/load-balancing.md","articles":[]},"previous":{"title":"Single Machine Deployment","level":"2.1.5","depth":2,"path":"pages/deployment-install/centralized-deployment.md","ref":"pages/deployment-install/centralized-deployment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/distributed-deployment.md","mtime":"2016-11-22T17:49:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T20:10:58.458Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
