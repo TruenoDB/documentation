@@ -1,9 +1,7 @@
 #Drivers/Connectors
 
----
-
-You can connect to **Trueno** from your favorite programming languaje.
-Current supported languajes are:
+You can connect to **Trueno** from your favorite programming language.
+Currently supported languages are:
 
     - Javascript/Node.js
     - Java
@@ -11,7 +9,6 @@ Current supported languajes are:
 
 ##Examples
 
----
 
 {% codetabs name="<img src='../../../assets/icons/language-javascript.png'/>javascript", type="js" -%}
     [import](code-create-connection.js)
