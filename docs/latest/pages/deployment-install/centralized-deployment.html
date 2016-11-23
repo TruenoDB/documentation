@@ -662,10 +662,10 @@
 <hr>
 <p>This section servers as a guide to deploy Trueno in a single machine.</p>
 <p>Run trueno single instance:</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start
 </code></pre>
 <p>You will see a console output similar to the following:</p>
-<pre><code class="lang-ruby">    info<span class="token punctuation">:</span> <span class="token constant">Sanity</span> check done<span class="token punctuation">,</span> all components present<span class="token punctuation">.</span>
+<pre class="language-"><code class="lang-ruby language-">    info<span class="token punctuation">:</span> <span class="token constant">Sanity</span> check done<span class="token punctuation">,</span> all components present<span class="token punctuation">.</span>
     info<span class="token punctuation">:</span> <span class="token constant">Executing</span> <span class="token constant">Trueno</span> <span class="token constant">Components</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
     info<span class="token punctuation">:</span> <span class="token constant">Spark</span> <span class="token constant">Master</span> successfully started<span class="token operator">!</span>
     info<span class="token punctuation">:</span> <span class="token constant">Spark</span> <span class="token constant">Worker</span> successfully started<span class="token operator">!</span>
@@ -684,14 +684,14 @@
 If Trueno must be accessed from outside your computer, you can use the <strong>-h</strong> flag to bind to a public address, 
 for instance &apos;0.0.0.0&apos; (all interfaces).</p>
 <p>If you want to run Trueno as a background process, the <strong>forever</strong> flag can be used.</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start --forever
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start --forever
 </code></pre>
 <p>To stop Trueno, simply execute:</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno stop
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno stop
 </code></pre>
 <p>Trueno and all subcomponents will be stopped.</p>
 <p>The following is a complete example of starting Trueno in a single machine with all available flags and their explanation:</p>
-<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno start \
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start \
     -h <span class="token string">&apos;my_custom_host&apos;</span>
     -p 9999
     --dir /path/to/my/data/dir
@@ -746,7 +746,7 @@ for instance &apos;0.0.0.0&apos; (all interfaces).</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Single Machine Deployment","level":"2.1.5","depth":2,"next":{"title":"Cluster Deployment","level":"2.1.6","depth":2,"path":"pages/deployment-install/distributed-deployment.md","ref":"pages/deployment-install/distributed-deployment.md","articles":[]},"previous":{"title":"Ports & Flags","level":"2.1.4","depth":2,"path":"pages/deployment-install/cli-flags-ports.md","ref":"pages/deployment-install/cli-flags-ports.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/centralized-deployment.md","mtime":"2016-11-22T17:57:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-22T20:10:58.458Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Single Machine Deployment","level":"2.1.5","depth":2,"next":{"title":"Cluster Deployment","level":"2.1.6","depth":2,"path":"pages/deployment-install/distributed-deployment.md","ref":"pages/deployment-install/distributed-deployment.md","articles":[]},"previous":{"title":"Ports & Flags","level":"2.1.4","depth":2,"path":"pages/deployment-install/cli-flags-ports.md","ref":"pages/deployment-install/cli-flags-ports.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/centralized-deployment.md","mtime":"2016-11-23T03:15:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-23T03:25:19.419Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
