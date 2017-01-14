@@ -39,8 +39,9 @@
 
 ---
 * [FAQ]() 
-* [Developer Guide]() 
-    - [Under the hood]()
-    - [Codebase]()
-    - [Execution Flow]()
-    - [Contribution Guide]()
+* [Developer Guide]()
+    - [Design Choices](pages/developer-guide/design-choices.md)
+    - [Development Environment](pages/developer-guide/development-environment.md)
+    - [Codebase](pages/developer-guide/codebase.md)
+    - [Execution Flow](pages/developer-guide/execution-flow.md)
+    - [Contribution Guide](pages/developer-guide/contribution-guide.md)
