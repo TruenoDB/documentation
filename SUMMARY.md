@@ -34,13 +34,13 @@
       - [Connected Components](pages/compute/algorithms/connected-components.md)
       - [Triangle Counting](pages/compute/algorithms/triangle-counting.md)
       - [Clustering](pages/compute/algorithms/clustering.md)
-* [Recipes]() 
+<!-- * [Recipes]()  -->
 * [Web Console]()
 
 ---
 * [FAQ]() 
 * [Developer Guide]()
-    - [Design Choices](pages/developer-guide/design-choices.md)
+    <!-- - [Design Choices](pages/developer-guide/design-choices.md) -->
     - [Development Environment](pages/developer-guide/development-environment.md)
     - [Codebase](pages/developer-guide/codebase.md)
     - [Execution Flow](pages/developer-guide/execution-flow.md)

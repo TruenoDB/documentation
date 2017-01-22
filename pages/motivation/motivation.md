@@ -4,7 +4,7 @@
 
 Trueno came to fruition because of the following arguments and needs:
 
-- As **2016**, there's not a wide variety of graphs databases available.
+- As **2017**, there's not a wide variety of graphs databases available.
 - Existing solutions are either:
     + **Hard to setup and deploy**.
     + Propietary and closed source.
