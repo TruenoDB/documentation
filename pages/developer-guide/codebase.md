@@ -52,13 +52,13 @@ The most important directories of the project are **conf** and **lib**.
 Finally, the most complex and important structure to explain may be the **core** directory:
 
 ![](../../assets/icons/folder.png)**core**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**api**: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**binaries**: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**communication**: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**data**: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**data_structures**: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**enum**: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**initialize**: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**logging**: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**status**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**api**: The communication protocol library, all client calls are here.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**binaries**: Components binary folder, generated after setup. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**communication**: The WebSocket library for clients and internal communication.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**data**: The default data directory. Generated at runtime if no data path is provided.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**data_structures**: Shared datastructures, ex. Graph, Vertice, and Edge.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**enum**: Trueno enumerators.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**initialize**: The initialization library, the initial execution flow begins here.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**logging**: The logging library.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**status**: The metrics analyzer library.<br>
 
