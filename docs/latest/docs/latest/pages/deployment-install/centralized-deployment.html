@@ -1,0 +1,809 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Single Machine Deployment · Trueno</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="distributed-deployment.html" />
+    
+    
+    <link rel="prev" href="cli-flags-ports.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Version 0.0.0</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Trueno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../motivation/motivation.html">
+            
+                <a href="../motivation/motivation.html">
+            
+                    
+                    Motivation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../quick-start/quick-start-commands.html">
+            
+                <a href="../quick-start/quick-start-commands.html">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Deployment/Uninstall
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    Install
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="update.html">
+            
+                <a href="update.html">
+            
+                    
+                    Update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="uninstall.html">
+            
+                <a href="uninstall.html">
+            
+                    
+                    Uninstall
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="cli-flags-ports.html">
+            
+                <a href="cli-flags-ports.html">
+            
+                    
+                    Ports & Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.5" data-path="centralized-deployment.html">
+            
+                <a href="centralized-deployment.html">
+            
+                    
+                    Single Machine Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="distributed-deployment.html">
+            
+                <a href="distributed-deployment.html">
+            
+                    
+                    Cluster Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="load-balancing.html">
+            
+                <a href="load-balancing.html">
+            
+                    
+                    Load Balancing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="tools.html">
+            
+                <a href="tools.html">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    API & Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../api-drivers/drivers-connectors/drivers-connectors.html">
+            
+                <a href="../api-drivers/drivers-connectors/drivers-connectors.html">
+            
+                    
+                    Drivers/Connectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../api-drivers/graph.html">
+            
+                <a href="../api-drivers/graph.html">
+            
+                    
+                    Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../api-drivers/vertex.html">
+            
+                <a href="../api-drivers/vertex.html">
+            
+                    
+                    Vertex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../api-drivers/edge.html">
+            
+                <a href="../api-drivers/edge.html">
+            
+                    
+                    Edge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" >
+            
+                <span>
+            
+                    
+                    Batch Operations
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../api-drivers/gremlin.html">
+            
+                <a href="../api-drivers/gremlin.html">
+            
+                    
+                    Gremlin Queries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" >
+            
+                <span>
+            
+                    
+                    SQL Queries
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" >
+            
+                <span>
+            
+                    
+                    Compute API
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Compute
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../compute/compute-server/trueno-compute-server.html">
+            
+                <a href="../compute/compute-server/trueno-compute-server.html">
+            
+                    
+                    Trueno's Compute Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../compute/algorithms/algorithms.html">
+            
+                <a href="../compute/algorithms/algorithms.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.2.1" data-path="../compute/algorithms/pagerank.html">
+            
+                <a href="../compute/algorithms/pagerank.html">
+            
+                    
+                    PageRank
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.2" data-path="../compute/algorithms/connected-components.html">
+            
+                <a href="../compute/algorithms/connected-components.html">
+            
+                    
+                    Connected Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.3" data-path="../compute/algorithms/triangle-counting.html">
+            
+                <a href="../compute/algorithms/triangle-counting.html">
+            
+                    
+                    Triangle Counting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.4" data-path="../compute/algorithms/clustering.html">
+            
+                <a href="../compute/algorithms/clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Recipes
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    Web Console
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    FAQ
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    Developer Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" >
+            
+                <span>
+            
+                    
+                    Under the hood
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                    Codebase
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" >
+            
+                <span>
+            
+                    
+                    Execution Flow
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" >
+            
+                <span>
+            
+                    
+                    Contribution Guide
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Single Machine Deployment</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="single-machine-deploymentcentralized"><img src="../../assets/icons/server-minus.png" alt="">Single Machine Deployment(Centralized)</h1>
+<hr>
+<p>This section servers as a guide to deploy Trueno in a single machine.</p>
+<p>Run trueno single instance:</p>
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start
+</code></pre>
+<p>You will see a console output similar to the following:</p>
+<pre class="language-"><code class="lang-ruby language-">    info<span class="token punctuation">:</span> <span class="token constant">Sanity</span> check done<span class="token punctuation">,</span> all components present<span class="token punctuation">.</span>
+    info<span class="token punctuation">:</span> <span class="token constant">Executing</span> <span class="token constant">Trueno</span> <span class="token constant">Components</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    info<span class="token punctuation">:</span> <span class="token constant">Spark</span> <span class="token constant">Master</span> successfully started<span class="token operator">!</span>
+    info<span class="token punctuation">:</span> <span class="token constant">Spark</span> <span class="token constant">Worker</span> successfully started<span class="token operator">!</span>
+    info<span class="token punctuation">:</span> <span class="token constant">Gremlin</span> <span class="token constant">Server</span> successfully started<span class="token operator">!</span>
+    info<span class="token punctuation">:</span> <span class="token constant">Elasticsearch</span> successfully started<span class="token operator">!</span>
+    info<span class="token punctuation">:</span> <span class="token constant">Cassandra</span> successfully started<span class="token operator">!</span>
+    info<span class="token punctuation">:</span> <span class="token constant">All</span> components started
+    info<span class="token punctuation">:</span> <span class="token constant">Starting</span> database<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    info<span class="token punctuation">:</span> <span class="token constant">Internal</span> <span class="token constant">API</span> awaiting <span class="token keyword">for</span> connections at<span class="token punctuation">:</span> localhost<span class="token punctuation">:</span><span class="token number">8001</span>
+    info<span class="token punctuation">:</span> <span class="token constant">ElasticSeach</span> engine connected at<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">&quot;port&quot;</span><span class="token punctuation">:</span><span class="token number">8004</span><span class="token punctuation">,</span><span class="token string">&quot;host&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;localhost&quot;</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+    info<span class="token punctuation">:</span> <span class="token constant">External</span> <span class="token constant">API</span> awaiting <span class="token keyword">for</span> connections at<span class="token punctuation">:</span> localhost<span class="token punctuation">:</span><span class="token number">8000</span>
+    info<span class="token punctuation">:</span> <span class="token constant">Cluster</span> status collected<span class="token punctuation">.</span>  _id<span class="token operator">=</span>localhost<span class="token punctuation">,</span> arch<span class="token operator">=</span><span class="token number">64</span><span class="token punctuation">,</span> model<span class="token operator">=</span><span class="token function">Intel</span><span class="token punctuation">(</span><span class="token constant">R</span><span class="token punctuation">)</span> <span class="token function">Core</span><span class="token punctuation">(</span><span class="token constant">TM</span><span class="token punctuation">)</span> i5<span class="token operator">-</span>5257U <span class="token constant">CPU</span> @ <span class="token number">2</span><span class="token punctuation">.</span>70GHz<span class="token punctuation">,</span> speed<span class="token operator">=</span><span class="token number">2700</span><span class="token punctuation">,</span> user<span class="token operator">=</span><span class="token number">181792530</span><span class="token punctuation">,</span> nice<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> sys<span class="token operator">=</span><span class="token number">116932760</span><span class="token punctuation">,</span> idle<span class="token operator">=</span><span class="token number">744926600</span><span class="token punctuation">,</span> irq<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> cores<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> network<span class="token operator">=</span>null<span class="token punctuation">,</span> freemem<span class="token operator">=</span><span class="token number">147283968</span><span class="token punctuation">,</span> hostname<span class="token operator">=</span>localhost<span class="token punctuation">,</span> platform<span class="token operator">=</span><span class="token constant">Node</span><span class="token punctuation">.</span>js<span class="token punctuation">,</span> totalmem<span class="token operator">=</span><span class="token number">8589934592</span><span class="token punctuation">,</span> uptime<span class="token operator">=</span><span class="token number">9068212</span><span class="token punctuation">,</span> osversion<span class="token operator">=</span><span class="token number">15.6</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token punctuation">,</span> version<span class="token operator">=</span><span class="token number">6.0</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token punctuation">,</span> os<span class="token operator">=</span><span class="token constant">OS</span> <span class="token constant">X</span><span class="token punctuation">,</span> <span class="token variable">$ref</span><span class="token operator">=</span>$<span class="token punctuation">[</span><span class="token string">&quot;_instance&quot;</span><span class="token punctuation">]</span>
+    info<span class="token punctuation">:</span> <span class="token constant">PM2</span><span class="token operator">-</span><span class="token constant">UI</span> <span class="token constant">Monitor</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token constant">INFO</span><span class="token punctuation">]</span> <span class="token constant">Starting</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>This will start Trueno as a single instance. Trueno connects by default to the address <strong><a href="http://localhost:8000" target="_blank">http://localhost:8000</a></strong> 
+If Trueno must be accessed from outside your computer, you can use the <strong>-h</strong> flag to bind to a public address, 
+for instance &apos;0.0.0.0&apos; (all interfaces).</p>
+<p>If you want to run Trueno as a background process, the <strong>forever</strong> flag can be used.</p>
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start --forever
+</code></pre>
+<p>To stop Trueno, simply execute:</p>
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno stop
+</code></pre>
+<p>Trueno and all subcomponents will be stopped.</p>
+<p>The following is a complete example of starting Trueno in a single machine with all available flags and their explanation:</p>
+<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno start \
+    -h <span class="token string">&apos;my_custom_host&apos;</span>
+    -p 9999
+    --dir /path/to/my/data/dir
+    --debug
+</code></pre>
+<ul>
+<li><strong>h</strong>: Provide the hostname to bind, in this example, locahost will be used.</li>
+<li><strong>p</strong>: The external port for external driver connections, in this example <strong>9999</strong>.</li>
+<li><strong>dir</strong>: The data directory. All data will be stored in this directory.</li>
+<li><strong>debug</strong>: Print all output, including errors to console for all components.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="cli-flags-ports.html" class="navigation navigation-prev " aria-label="Previous page: Ports & Flags">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="distributed-deployment.html" class="navigation navigation-next " aria-label="Next page: Cluster Deployment">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Single Machine Deployment","level":"2.1.5","depth":2,"next":{"title":"Cluster Deployment","level":"2.1.6","depth":2,"path":"pages/deployment-install/distributed-deployment.md","ref":"pages/deployment-install/distributed-deployment.md","articles":[]},"previous":{"title":"Ports & Flags","level":"2.1.4","depth":2,"path":"pages/deployment-install/cli-flags-ports.md","ref":"pages/deployment-install/cli-flags-ports.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/centralized-deployment.md","mtime":"2016-11-23T03:15:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-23T03:25:19.419Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
