@@ -499,19 +499,6 @@
                 <span>
             
                     
-                    Recipes
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.5" >
-            
-                <span>
-            
-                    
                     Web Console
             
                 </span>
@@ -554,53 +541,137 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" >
+        <li class="chapter " data-level="3.2.1" data-path="../developer-guide/development-environment.html">
             
-                <span>
+                <a href="../developer-guide/development-environment.html">
             
                     
-                    Under the hood
+                    Development Environment
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" >
+        <li class="chapter " data-level="3.2.2" data-path="../developer-guide/codebase.html">
             
-                <span>
+                <a href="../developer-guide/codebase.html">
             
                     
                     Codebase
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="3.2.3" >
+        <li class="chapter " data-level="3.2.3" data-path="../developer-guide/execution-flow.html">
             
-                <span>
+                <a href="../developer-guide/execution-flow.html">
             
                     
                     Execution Flow
             
-                </span>
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1" data-path="../developer-guide/execution-flow/start.html">
+            
+                <a href="../developer-guide/execution-flow/start.html">
+            
+                    
+                    start
+            
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="3.2.4" >
+        <li class="chapter " data-level="3.2.3.2" data-path="../developer-guide/execution-flow/stop.html">
             
-                <span>
+                <a href="../developer-guide/execution-flow/stop.html">
+            
+                    
+                    stop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.3" data-path="../developer-guide/execution-flow/setup.html">
+            
+                <a href="../developer-guide/execution-flow/setup.html">
+            
+                    
+                    setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.4" data-path="../developer-guide/execution-flow/console.html">
+            
+                <a href="../developer-guide/execution-flow/console.html">
+            
+                    
+                    console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.5" data-path="../developer-guide/execution-flow/tools.html">
+            
+                <a href="../developer-guide/execution-flow/tools.html">
+            
+                    
+                    tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.6" data-path="../developer-guide/execution-flow/balancer.html">
+            
+                <a href="../developer-guide/execution-flow/balancer.html">
+            
+                    
+                    balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../developer-guide/contribution-guide.html">
+            
+                <a href="../developer-guide/contribution-guide.html">
             
                     
                     Contribution Guide
             
-                </span>
+                </a>
             
 
             
@@ -661,23 +732,23 @@
 <h3 id="monitoring"><img src="../../assets/icons/chart-bar.png" alt="">Monitoring</h3>
 <p>To inspect the status of all the running Trueno components are running, use the <strong>tools</strong> command.</p>
 <p>To check Trueno&apos;s current status:</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --status
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --status
 </code></pre>
 <p>To start the Trueno monitor in <strong>simple</strong> mode: </p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --monitor s
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --monitor s
 </code></pre>
 <p><strong>Simple</strong> mode will show the current usage of all components and other status information.</p>
 <p>To start the Trueno monitor in <strong>advanced</strong> mode: </p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --monitor a
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --monitor a
 </code></pre>
 <p><strong>Advanced</strong> mode will show you detailed information and log output of each component.</p>
 <h3 id="misc"><img src="../../assets/icons/broom.png" alt="">Misc</h3>
 <p>Trueno tools provides some extra functionality that must be used with caution. </p>
 <p>To <strong>wipe</strong> all data from the Trueno installation.</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --clear
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --clear
 </code></pre>
 <p>To clear all logs from the Trueno Core and internal components:</p>
-<pre class="language-"><code class="lang-bash language-">  <span class="token operator">&gt;</span> trueno tools --flush
+<pre><code class="lang-bash">  <span class="token operator">&gt;</span> trueno tools --flush
 </code></pre>
 
                                 
@@ -718,7 +789,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tools","level":"2.1.8","depth":2,"next":{"title":"API & Drivers","level":"2.2","depth":1,"ref":"","articles":[{"title":"Drivers/Connectors","level":"2.2.1","depth":2,"path":"pages/api-drivers/drivers-connectors/drivers-connectors.md","ref":"pages/api-drivers/drivers-connectors/drivers-connectors.md","articles":[]},{"title":"Graph","level":"2.2.2","depth":2,"path":"pages/api-drivers/graph.md","ref":"pages/api-drivers/graph.md","articles":[]},{"title":"Vertex","level":"2.2.3","depth":2,"path":"pages/api-drivers/vertex.md","ref":"pages/api-drivers/vertex.md","articles":[]},{"title":"Edge","level":"2.2.4","depth":2,"path":"pages/api-drivers/edge.md","ref":"pages/api-drivers/edge.md","articles":[]},{"title":"Batch Operations","level":"2.2.5","depth":2,"ref":"","articles":[]},{"title":"Gremlin Queries","level":"2.2.6","depth":2,"path":"pages/api-drivers/gremlin.md","ref":"pages/api-drivers/gremlin.md","articles":[]},{"title":"SQL Queries","level":"2.2.7","depth":2,"ref":"","articles":[]},{"title":"Compute API","level":"2.2.8","depth":2,"ref":"","articles":[]}]},"previous":{"title":"Load Balancing","level":"2.1.7","depth":2,"path":"pages/deployment-install/load-balancing.md","ref":"pages/deployment-install/load-balancing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/tools.md","mtime":"2016-11-22T08:15:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-23T03:25:19.419Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tools","level":"2.1.8","depth":2,"next":{"title":"API & Drivers","level":"2.2","depth":1,"ref":"","articles":[{"title":"Drivers/Connectors","level":"2.2.1","depth":2,"path":"pages/api-drivers/drivers-connectors/drivers-connectors.md","ref":"pages/api-drivers/drivers-connectors/drivers-connectors.md","articles":[]},{"title":"Graph","level":"2.2.2","depth":2,"path":"pages/api-drivers/graph.md","ref":"pages/api-drivers/graph.md","articles":[]},{"title":"Vertex","level":"2.2.3","depth":2,"path":"pages/api-drivers/vertex.md","ref":"pages/api-drivers/vertex.md","articles":[]},{"title":"Edge","level":"2.2.4","depth":2,"path":"pages/api-drivers/edge.md","ref":"pages/api-drivers/edge.md","articles":[]},{"title":"Batch Operations","level":"2.2.5","depth":2,"ref":"","articles":[]},{"title":"Gremlin Queries","level":"2.2.6","depth":2,"path":"pages/api-drivers/gremlin.md","ref":"pages/api-drivers/gremlin.md","articles":[]},{"title":"SQL Queries","level":"2.2.7","depth":2,"ref":"","articles":[]},{"title":"Compute API","level":"2.2.8","depth":2,"ref":"","articles":[]}]},"previous":{"title":"Load Balancing","level":"2.1.7","depth":2,"path":"pages/deployment-install/load-balancing.md","ref":"pages/deployment-install/load-balancing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/deployment-install/tools.md","mtime":"2016-11-22T15:08:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-24T19:47:48.766Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

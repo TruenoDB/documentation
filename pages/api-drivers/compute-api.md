@@ -1,4 +1,4 @@
-#Compute API
+# Compute API
 
 # Trueno Elastic Search Spark Connector
 

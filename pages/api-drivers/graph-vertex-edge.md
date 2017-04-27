@@ -199,7 +199,7 @@ Our results will show the following:
   g.setId(1);
   g.setLabel("graphi");
 
-  let c = g.getCompute(Enums.algorithmType.DEPENDENCIES);
+  let c = g.getCompute(Enums.algorithmType.PAGERANK);
 
   /* Get the compute of the algorithm */
   c.deploy().then((jobId)=> {

@@ -4,6 +4,7 @@
   "description": "Documentation for the Trueno graph store.",
   "main": "index.js",
   "scripts": {
+    "serve": "gitbook serve",
     "build": "gitbook build && rm -rf docs/pre-latest && mkdir docs/pre-latest && cp -r _book/* docs/pre-latest/",
     "deploy": "mkdir docs/latest && mv docs/pre-latest/* docs/latest && rmdir docs/pre-latest"
   },

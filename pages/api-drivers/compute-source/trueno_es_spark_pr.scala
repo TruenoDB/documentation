@@ -1,21 +1,8 @@
 
-/*
- ________                                                 _______   _______
-/        |                                               /       \ /       \
-$$$$$$$$/______   __    __   ______   _______    ______  $$$$$$$  |$$$$$$$  |
-   $$ | /      \ / /|  / /| /      \ /       \  /      \ $$ |  $$ |$$ |__$$ |
-   $$ |/$$$$$$  |$$ |  $$ |/$$$$$$  |$$$$$$$  |/$$$$$$  |$$ |  $$ |$$    $$<
-   $$ |$$ |  $$/ $$ |  $$ |$$    $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$$$$$$  |
-   $$ |$$ |      $$ \__$$ |$$$$$$$$/ $$ |  $$ |$$ \__$$ |$$ |__$$ |$$ |__$$ |
-   $$ |$$ |      $$    $$/ $$       |$$ |  $$ |$$    $$/ $$    $$/ $$    $$/
-   $$/ $$/        $$$$$$/   $$$$$$$/ $$/   $$/  $$$$$$/  $$$$$$$/  $$$$$$$/
- */
-
-/**      In God we trust
-  * Created by: Servio Palacios on 2017.03.19.
-  * Source: PageRanksBenchmark.scala
-  * Author: Servio Palacios
-  * Description: Spark Job Connector using REST API
+/**      
+  * Source: PageRank.scala
+  * Author: 
+  * Description: Spark Job Connector using Transport API
   */
 import org.trueno.elasticsearch.spark.connector._
 import org.apache.spark.SparkContext    
@@ -45,19 +32,28 @@ import org.apache.spark.api.java.JavaSparkContext
 
 case class TruenoVertex(id: Long, label: Long)
 
+/* Instantiate transport Client from ES */
 val tc = new ESTransportClient("biogrid", sc)
 
-/* Read vertices from ES Benchmark */
+/* Read vertices from ES */
+val verticesESJavaRDD = tc.getVertexRDD()
 
+/* Converting JavaRDD to RDD */
 val verticesESRDD = verticesESJavaRDD.rdd
+
+/* Generating GraphX VertexRDD */
 val vertexRDD: RDD[(VertexId,Long)] = verticesESRDD.map ( x => (x,x) )
 
+/* Read edges from ES and converting to RDD */
 val scalaESSRDD = tc.getEdgeRDD().rdd
 
-val edgesESRDD: RDD[Edge[Long]] = scalaESSRDD.flatMap( x=> ( x.map (y => ( Edge(y._1, y._2, 1.toLong) ) ) ) )
+/* Generating GraphX EdgeRDD */
+val edgesRDD: RDD[Edge[Long]] = scalaESSRDD.flatMap( x=> ( x.map (y => ( Edge(y._1, y._2, 1.toLong) ) ) ) )
 
-val graph = Graph(vertexRDD, edgesESRDD)
+/* Creating Graph */
+val graph = Graph(vertexRDD, edgesRDD)
 
+/* Running PageRank on the graph */
 val g2 = PageRank.runUntilConvergence(graph,0.001)
 
 
