@@ -4,15 +4,15 @@
 
 ## ![](../../assets/icons/serial-port.png)Ports
 
-- ![](../../assets/icons/serial-port.png) **8000**: Trueno default external port. This port will be exposed to external drivers.
+- ![](../../assets/icons/serial-port.png) **8000**: Trueno Web Console.
 - ![](../../assets/icons/serial-port.png) **8001**: Trueno internal port. This port is only used for internal system communication.
 - ![](../../assets/icons/serial-port.png) **8002**: The Gremlin Server port.
-- ![](../../assets/icons/serial-port.png) **8003**: Cassandra external port.
 - ![](../../assets/icons/serial-port.png) **8004**: ElasticSearch external port.
 - ![](../../assets/icons/serial-port.png) **8005**: Spark Master external port.
 - ![](../../assets/icons/serial-port.png) **8006**: Spark Web UI port.
+- ![](../../assets/icons/serial-port.png) **8007**: Trueno default external port. This port will be exposed to external drivers. 
 
-**NOTE**: At the moment, the only configurable port is the Trueno default port(8000). If you need to change a certain port, edit directly the configuration file at:
+**NOTE**: At the moment, the only configurable port is the Trueno Web Concole (8000) and the default port(8007). If you need to change a certain port, edit directly the configuration file at:
 
 > path/to/global/node_modules/trueno/conf/trueno-config.yaml
 

@@ -30,10 +30,9 @@ This will intall Trueno globally in your system. Verify by executing the help co
   This command will take a while to complete depending on your internet connection speed and procesing power. The following components will be installed:
 
   - [Gremlin Server](https://tinkerpop.apache.org/): For the Gremlin Graph Traversal languaje.
-  - [Elastic Search](https://www.elastic.co/): For indexing the graph data.
-  - [Apache Cassandra](http://cassandra.apache.org/): For persistent and distributed backend storage.
+  - [Elastic Search](https://www.elastic.co/): For persistent, distributed backend storagem and indexing the graph data.
   - [Apache Spark](http://spark.apache.org/): For graph algorithm computation using GraphX.
-  - [Trueno Compute Server](https://github.com/TruenoDB/trueno-compute-server): A wrapper over [Spark-JobServer](https://github.com/spark-jobserver/spark-jobserver) for deploying jobs.
+  - [Trueno Compute Server](https://github.com/TruenoDB/trueno-compute-server): For graph analytics over Apache Spark and Graphx.
 
     Trueno will also download and install several Elastic Search plugins to facilitate the graph, vertices, and edges retrieval in a eficient way.
 
