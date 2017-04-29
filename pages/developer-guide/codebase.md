@@ -33,7 +33,6 @@ The most important directories of the project are **conf** and **lib**.
 
 
 ![](../../assets/icons/folder.png)**lib**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**backend**: Persistent storage layer(cassandra) sources.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**balancer**: Websocket load balancer sources.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**compute**: Graph compute layer sources.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;![](../../assets/icons/folder.png)**console**: Trueno CLI console sources.<br>

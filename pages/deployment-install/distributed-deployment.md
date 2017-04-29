@@ -6,8 +6,7 @@ This section describes how to deploy Trueno in a cluster environment, i.e. horiz
 
 Important notes:
 
-- Trueno has 3 distributed sub-components that are resilient and distributed by design:
-    + Apache Cassandra
+- Trueno has 2 distributed sub-components that are resilient and distributed by design:
     + ElasticSearch
     + Spark
 - When running Trueno in cluster mode, all machines will connect these sub-components and create your cluster.

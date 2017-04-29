@@ -26,7 +26,6 @@ It will be useful to read a bit of Database principles before develop new featur
 - [DATABASES: SELF-PACED](http://online.stanford.edu/course/databases-self-paced)(Stanford Online Courses)
 - [Free Self-Paced Courses](https://academy.datastax.com/courses)(from DataStax)
 - [Graph Databases for Beginners: ACID vs. BASE Explained](https://neo4j.com/blog/acid-vs-base-consistency-models-explained/)(Neo4J)
-- [Learn Cassandra](https://www.gitbook.com/book/teddyma/learncassandra/details)(gitbook)
 
 ## Graphs
 

@@ -1,0 +1,941 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Compute API · Trueno</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Version 0.0.0</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Trueno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../motivation/motivation.html">
+            
+                <a href="../motivation/motivation.html">
+            
+                    
+                    Motivation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../quick-start/quick-start-commands.html">
+            
+                <a href="../quick-start/quick-start-commands.html">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Deployment/Uninstall
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../deployment-install/install.html">
+            
+                <a href="../deployment-install/install.html">
+            
+                    
+                    Install
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../deployment-install/update.html">
+            
+                <a href="../deployment-install/update.html">
+            
+                    
+                    Update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../deployment-install/uninstall.html">
+            
+                <a href="../deployment-install/uninstall.html">
+            
+                    
+                    Uninstall
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../deployment-install/cli-flags-ports.html">
+            
+                <a href="../deployment-install/cli-flags-ports.html">
+            
+                    
+                    Ports & Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../deployment-install/centralized-deployment.html">
+            
+                <a href="../deployment-install/centralized-deployment.html">
+            
+                    
+                    Single Machine Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../deployment-install/distributed-deployment.html">
+            
+                <a href="../deployment-install/distributed-deployment.html">
+            
+                    
+                    Cluster Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../deployment-install/load-balancing.html">
+            
+                <a href="../deployment-install/load-balancing.html">
+            
+                    
+                    Load Balancing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../deployment-install/tools.html">
+            
+                <a href="../deployment-install/tools.html">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    API & Drivers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="drivers-connectors/drivers-connectors.html">
+            
+                <a href="drivers-connectors/drivers-connectors.html">
+            
+                    
+                    Drivers/Connectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="graph-vertex-edge.html">
+            
+                <a href="graph-vertex-edge.html">
+            
+                    
+                    Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="graph-vertex-edge.html">
+            
+                <a href="graph-vertex-edge.html">
+            
+                    
+                    Vertex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="graph-vertex-edge.html">
+            
+                <a href="graph-vertex-edge.html">
+            
+                    
+                    Edge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" >
+            
+                <span>
+            
+                    
+                    Batch Operations
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="gremlin.html">
+            
+                <a href="gremlin.html">
+            
+                    
+                    Gremlin Queries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" >
+            
+                <span>
+            
+                    
+                    SQL Queries
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.8" data-path="compute-api.html">
+            
+                <a href="compute-api.html">
+            
+                    
+                    Compute API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Compute
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../compute/compute-server/trueno-compute-server.html">
+            
+                <a href="../compute/compute-server/trueno-compute-server.html">
+            
+                    
+                    Trueno's Compute Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../compute/algorithms/algorithms.html">
+            
+                <a href="../compute/algorithms/algorithms.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.2.1" data-path="../compute/algorithms/pagerank.html">
+            
+                <a href="../compute/algorithms/pagerank.html">
+            
+                    
+                    PageRank
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.2" data-path="../compute/algorithms/connected-components.html">
+            
+                <a href="../compute/algorithms/connected-components.html">
+            
+                    
+                    Connected Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.3" data-path="../compute/algorithms/triangle-counting.html">
+            
+                <a href="../compute/algorithms/triangle-counting.html">
+            
+                    
+                    Triangle Counting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.4" data-path="../compute/algorithms/clustering.html">
+            
+                <a href="../compute/algorithms/clustering.html">
+            
+                    
+                    Clustering
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Web Console
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    FAQ
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    Developer Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../developer-guide/development-environment.html">
+            
+                <a href="../developer-guide/development-environment.html">
+            
+                    
+                    Development Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../developer-guide/codebase.html">
+            
+                <a href="../developer-guide/codebase.html">
+            
+                    
+                    Codebase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../developer-guide/execution-flow.html">
+            
+                <a href="../developer-guide/execution-flow.html">
+            
+                    
+                    Execution Flow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1" data-path="../developer-guide/execution-flow/start.html">
+            
+                <a href="../developer-guide/execution-flow/start.html">
+            
+                    
+                    start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.2" data-path="../developer-guide/execution-flow/stop.html">
+            
+                <a href="../developer-guide/execution-flow/stop.html">
+            
+                    
+                    stop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.3" data-path="../developer-guide/execution-flow/setup.html">
+            
+                <a href="../developer-guide/execution-flow/setup.html">
+            
+                    
+                    setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.4" data-path="../developer-guide/execution-flow/console.html">
+            
+                <a href="../developer-guide/execution-flow/console.html">
+            
+                    
+                    console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.5" data-path="../developer-guide/execution-flow/tools.html">
+            
+                <a href="../developer-guide/execution-flow/tools.html">
+            
+                    
+                    tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.6" data-path="../developer-guide/execution-flow/balancer.html">
+            
+                <a href="../developer-guide/execution-flow/balancer.html">
+            
+                    
+                    balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../developer-guide/contribution-guide.html">
+            
+                <a href="../developer-guide/contribution-guide.html">
+            
+                    
+                    Contribution Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Compute API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="compute-api">Compute API</h1>
+<h1 id="trueno-elastic-search-spark-connector">Trueno Elastic Search Spark Connector</h1>
+<p>Trueno&apos;s ElasticSearch Connector for <a href="#apache-spark">Apache Spark</a>.</p>
+<h2 id="requirements">Requirements</h2>
+<p>Elasticsearch 2.x cluster accessible through [transport].</p>
+<h2 id="architecture">Architecture</h2>
+<p align="center">
+  <img height="600" src="https://raw.githubusercontent.com/TruenoDB/trueno-elasticsearch-spark-connector/master/assets/images/trueno-elasticsearch-spark-connector.png">
+</p>
+
+<h2 id="installation">Installation</h2>
+<p>Available through any Maven-compatible tool:</p>
+<pre><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.trueno.elasticsearch.spark.connector<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>elasticsearch-spark-connector<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>0.0.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h2 id="using-truenos-elastic-search-spark-connector">Using Trueno&apos;s Elastic Search Spark Connector</h2>
+<pre><code>spark-2.1.0-bin-hadoop2.7$ ./bin/spark-shell --jars elasticsearch-spark-connector.jar
+</code></pre><h2 id="loading-library-from-scalaspark">Loading library from scala/spark</h2>
+<pre><code>Spark session available as &apos;spark&apos;.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  &apos;_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.1.0
+      /_/
+
+Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_91)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala&gt; import org.trueno.elasticsearch.spark.connector._
+import org.trueno.elasticsearch.spark.connector._
+
+scala&gt; val transportClient = new ESTransportClient(index, sc)
+transportClient: org.trueno.elasticsearch.spark.connector.ESTransportClient = org.trueno.elasticsearch.spark.connector.ESTransportClient@31b7112d
+
+scala&gt; val verticesRDD = transportClient.getVertexRDD()
+Elasticsearch client retrieving vertices ...
+</code></pre><h2 id="api-example">API Example</h2>
+<pre><code class="lang-scala"><span class="token comment" spellcheck="true">/* Trueno ES Spark Connector */</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>trueno<span class="token punctuation">.</span>elasticsearch<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>connector<span class="token punctuation">.</span>_
+
+<span class="token comment" spellcheck="true">/* GraphX references */</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>graphx<span class="token punctuation">.</span>_
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>graphx<span class="token punctuation">.</span>lib<span class="token punctuation">.</span>_
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>graphx<span class="token punctuation">.</span>VertexRDD
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>rdd<span class="token punctuation">.</span>RDD
+
+<span class="token keyword">val</span> transportClient <span class="token operator">=</span> <span class="token keyword">new</span> ESTransportClient<span class="token punctuation">(</span><span class="token string">&quot;biogrid&quot;</span><span class="token punctuation">,</span>sc<span class="token punctuation">)</span>
+
+<span class="token keyword">val</span> verticesRDD <span class="token operator">=</span> transportClient<span class="token punctuation">.</span>getVertexRDD<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">val</span> edgesRDD <span class="token operator">=</span> transportClient<span class="token punctuation">.</span>getEdgeRDD<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">val</span> graph <span class="token operator">=</span> transportClient<span class="token punctuation">.</span>getGraph<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">val</span> g2 <span class="token operator">=</span> PageRank<span class="token punctuation">.</span>runUntilConvergence<span class="token punctuation">(</span>graph<span class="token punctuation">,</span><span class="token number">0.001</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="running-pagerank-from-the-spark-shell">Running PageRank from the Spark-Shell</h2>
+<p><div class="codetabs"><div class="codetabs-header"><div class="tab active" data-codetab="0"><img src="../../assets/icons/language-java.png">java</div></div><div class="codetabs-body"><div class="tab active" data-codetab="0"><pre><code class="lang-java"><span class="token comment" spellcheck="true">/**      
+  * Source: PageRank.scala
+  * Author: 
+  * Description: Spark Job Connector using Transport API
+  */</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>trueno<span class="token punctuation">.</span>elasticsearch<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>connector<span class="token punctuation">.</span>_
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>SparkContext    
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>SparkContext<span class="token punctuation">.</span>_
+
+<span class="token comment" spellcheck="true">/* GraphX references */</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>graphx<span class="token punctuation">.</span>_
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>graphx<span class="token punctuation">.</span>lib<span class="token punctuation">.</span>_
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>graphx<span class="token punctuation">.</span>VertexRDD
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>graphx<span class="token punctuation">.</span>EdgeRDD
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>rdd<span class="token punctuation">.</span>RDD
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>SparkConf
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span><span class="token punctuation">{</span>Map <span class="token operator">=</span><span class="token operator">&gt;</span> JMap<span class="token punctuation">}</span>
+
+<span class="token keyword">import</span> scala<span class="token punctuation">.</span>collection<span class="token punctuation">.</span>JavaConverters<span class="token punctuation">.</span>mapAsScalaMapConverter
+<span class="token keyword">import</span> scala<span class="token punctuation">.</span>collection<span class="token punctuation">.</span>JavaConverters<span class="token punctuation">.</span>_
+<span class="token keyword">import</span> scala<span class="token punctuation">.</span>collection<span class="token punctuation">.</span>JavaConversions<span class="token punctuation">.</span>_
+<span class="token keyword">import</span> scala<span class="token punctuation">.</span>collection<span class="token punctuation">.</span>immutable<span class="token punctuation">.</span>HashMap
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>api<span class="token punctuation">.</span>java<span class="token punctuation">.</span>JavaPairRDD
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>api<span class="token punctuation">.</span>java<span class="token punctuation">.</span>JavaPairRDD<span class="token punctuation">.</span>fromRDD
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>api<span class="token punctuation">.</span>java<span class="token punctuation">.</span>JavaRDD
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>api<span class="token punctuation">.</span>java<span class="token punctuation">.</span>JavaSparkContext
+
+
+<span class="token keyword">case</span> <span class="token keyword">class</span> <span class="token class-name">TruenoVertex</span><span class="token punctuation">(</span>id<span class="token operator">:</span> Long<span class="token punctuation">,</span> label<span class="token operator">:</span> Long<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">/* Instantiate transport Client from ES */</span>
+val tc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ESTransportClient</span><span class="token punctuation">(</span><span class="token string">&quot;biogrid&quot;</span><span class="token punctuation">,</span> sc<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">/* Read vertices from ES */</span>
+val verticesESJavaRDD <span class="token operator">=</span> tc<span class="token punctuation">.</span><span class="token function">getVertexRDD</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">/* Converting JavaRDD to RDD */</span>
+val verticesESRDD <span class="token operator">=</span> verticesESJavaRDD<span class="token punctuation">.</span>rdd
+
+<span class="token comment" spellcheck="true">/* Generating GraphX VertexRDD */</span>
+val vertexRDD<span class="token operator">:</span> RDD<span class="token punctuation">[</span><span class="token punctuation">(</span>VertexId<span class="token punctuation">,</span>Long<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> verticesESRDD<span class="token punctuation">.</span>map <span class="token punctuation">(</span> x <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span>x<span class="token punctuation">)</span> <span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">/* Read edges from ES and converting to RDD */</span>
+val scalaESSRDD <span class="token operator">=</span> tc<span class="token punctuation">.</span><span class="token function">getEdgeRDD</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>rdd
+
+<span class="token comment" spellcheck="true">/* Generating GraphX EdgeRDD */</span>
+val edgesRDD<span class="token operator">:</span> RDD<span class="token punctuation">[</span>Edge<span class="token punctuation">[</span>Long<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> scalaESSRDD<span class="token punctuation">.</span><span class="token function">flatMap</span><span class="token punctuation">(</span> x<span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span> x<span class="token punctuation">.</span>map <span class="token punctuation">(</span>y <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span> <span class="token function">Edge</span><span class="token punctuation">(</span>y<span class="token punctuation">.</span>_1<span class="token punctuation">,</span> y<span class="token punctuation">.</span>_2<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span>toLong<span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">/* Creating Graph */</span>
+val graph <span class="token operator">=</span> <span class="token function">Graph</span><span class="token punctuation">(</span>vertexRDD<span class="token punctuation">,</span> edgesRDD<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">/* Running PageRank on the graph */</span>
+val g2 <span class="token operator">=</span> PageRank<span class="token punctuation">.</span><span class="token function">runUntilConvergence</span><span class="token punctuation">(</span>graph<span class="token punctuation">,</span><span class="token number">0.001</span><span class="token punctuation">)</span></code></pre></div></div></div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Compute API","level":"2.2.8","depth":2,"next":{"title":"Compute","level":"2.3","depth":1,"ref":"","articles":[{"title":"Trueno's Compute Server","level":"2.3.1","depth":2,"path":"pages/compute/compute-server/trueno-compute-server.md","ref":"pages/compute/compute-server/trueno-compute-server.md","articles":[]},{"title":"Algorithms","level":"2.3.2","depth":2,"path":"pages/compute/algorithms/algorithms.md","ref":"pages/compute/algorithms/algorithms.md","articles":[{"title":"PageRank","level":"2.3.2.1","depth":3,"path":"pages/compute/algorithms/pagerank.md","ref":"pages/compute/algorithms/pagerank.md","articles":[]},{"title":"Connected Components","level":"2.3.2.2","depth":3,"path":"pages/compute/algorithms/connected-components.md","ref":"pages/compute/algorithms/connected-components.md","articles":[]},{"title":"Triangle Counting","level":"2.3.2.3","depth":3,"path":"pages/compute/algorithms/triangle-counting.md","ref":"pages/compute/algorithms/triangle-counting.md","articles":[]},{"title":"Clustering","level":"2.3.2.4","depth":3,"path":"pages/compute/algorithms/clustering.md","ref":"pages/compute/algorithms/clustering.md","articles":[]}]}]},"previous":{"title":"SQL Queries","level":"2.2.7","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","codetabs","expandable-chapters","include-codeblock","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/TruenoDB/documentation/"},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"assets/images/favicon.ico","custom-favicon":{},"include-codeblock":{"template":"{{{content}}}"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/TruenoDB/documentation/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Trueno","gitbook":">=3.2.1"},"file":{"path":"pages/api-drivers/compute-api.md","mtime":"2017-04-27T14:43:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-27T15:31:27.403Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

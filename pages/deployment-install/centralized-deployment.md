@@ -20,7 +20,6 @@ You will see a console output similar to the following:
     info: Spark Worker successfully started!
     info: Gremlin Server successfully started!
     info: Elasticsearch successfully started!
-    info: Cassandra successfully started!
     info: All components started
     info: Starting database...
     info: Internal API awaiting for connections at: localhost:8001
