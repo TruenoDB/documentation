@@ -1,4 +1,4 @@
-#Clustering Algorithms
+# Clustering Algorithms
 
 ---
 
@@ -19,4 +19,4 @@ Compute graph transitivity, the fraction of all possible triangles present in G.
 
 ### References
 1. D. J. Watts and Steven Strogatz (June 1998). "Collective dynamics of 'small-world' networks"
-2. https://en.wikipedia.org/wiki/Clustering_coefficient
+2. [Clustering Coefficient](https://en.wikipedia.org/wiki/Clustering_coefficient)
