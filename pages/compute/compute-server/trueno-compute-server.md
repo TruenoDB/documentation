@@ -30,14 +30,14 @@ GraphX is Apache **Spark**'s API for graphs and graph-parallel xcomputation.
 ### How GraphX works [2,3]
 
 #### Property Graph
-We can encode a property graph into **VertexRDD** and **EdgeRDD**.
+We can encode a property graph into **VertexRDD** and **EdgeRDD** [2].
 
 ![](../../../assets/images/compute/property-graph.png)
 
 #### Vextex Table (RDD), Edge Table (RDD), Routing Table
 ![](../../../assets/images/compute/encoding-graph.png)
 
-###References
+### References
   1. https://github.com/spark-jobserver/spark-jobserver
   2. https://spark.apache.org/graphx/
   3. Gonzalez, J. E., Xin, R. S., Dave, A., Crankshaw, D., Franklin, M. J., Gonzalez, J. E., … Stoica, I. (2014). GraphX : Graph Processing in a Distributed Dataflow Framework. 11th USENIX Symposium on Operating Systems Design and Implementation, 599–613. Retrieved from https://www.usenix.org/conference/osdi14/technical-sessions/presentation/gonzalez
