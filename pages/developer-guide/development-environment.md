@@ -19,26 +19,26 @@ In order to develop and modify Trueno, you must meet the following dependencies:
 * **Node.js 6** with **npm** or later (we recommend to use [nvm](https://github.com/creationix/nvm#install-script))
 * **tar** and **unzip**
 
-####Clone the repository
+#### Clone the repository
 
   ```bash
   > git clone https://github.com/TruenoDB/trueno.git
   ```
 
-####Install Node Modules and Bower Components
+#### Install Node Modules and Bower Components
 
   ```bash
   > cd trueno
   > npm install
   ```
 
-####Install Trueno Components
+#### Install Trueno Components
 
   ```bash
   > node lib//trueno.js setup
   ```
 
-####Start Trueno
+#### Start Trueno
 
   ```bash
   > node lib//trueno.js start
