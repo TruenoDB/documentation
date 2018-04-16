@@ -1,4 +1,4 @@
-#PageRank
+# PageRank
 
 ---
 
@@ -15,12 +15,12 @@ The algorithm is describe as follows:
   ![](../../../assets/images/compute/PageRank-iteration.png)
 **Note:** example taken from [2]
 
-####Invoking PageRank in GraphX
+#### Invoking PageRank in GraphX
 Object-Oriented and Object-Based are the two ways to invoke PageRank on GraphX [1].
 
   ![](../../../assets/images/compute/PageRank-object-graph.png)
 
-###References
+### References
   1. Malak, M., & East, R. (2016). Spark GraphX in Action. Manning.
   
   2. Cormen, T., Leiserson, C., Rivest, R., & Stein, C. (2009). Introduction to Algorithms. The MIT Press.
