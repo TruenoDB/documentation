@@ -9,7 +9,7 @@ The default traversal language for Trueno Web Console is gremlin. Trueno relies 
 
 ## Java Programming interface
 
-###Maven
+### Maven
 ```xml
     <dependency>
         <groupId>org.trueno</groupId>
