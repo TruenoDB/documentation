@@ -1,4 +1,4 @@
-#Gremlin Queries
+# Gremlin Queries
 
 ---
 
@@ -18,11 +18,11 @@ The default traversal language for Trueno Web Console is gremlin. Trueno relies 
     </dependency>
 ```
 
-###Features
+### Features
 * [Apache TinkerPop](http://tinkerpop.apache.org/) 3.x OLTP support.
 * Implementation on top of Trueno Java driver.
 
-###Connecting to the database
+### Connecting to the database
 * Create an instance of `TruenoGraph`.
 
 ```java
@@ -47,7 +47,7 @@ The default traversal language for Trueno Web Console is gremlin. Trueno relies 
             })
 ```
 
-###Working with graph elements
+### Working with graph elements
 * Create a [Vertex](http://tinkerpop.apache.org/javadocs/current/core/org/apache/tinkerpop/gremlin/structure/Vertex.html) in the current graph, using [Graph.addVertex()](http://tinkerpop.apache.org/javadocs/current/core/org/apache/tinkerpop/gremlin/structure/Graph.html#addVertex-java.lang.Object...-) method.
 
 ```java
@@ -65,7 +65,7 @@ The default traversal language for Trueno Web Console is gremlin. Trueno relies 
     Edge g = v1.addVertex("knows", v2, "since", 10);
 ```
 
-###Traversal
+### Traversal
 * Look up for a vertex.
 
 ```java
